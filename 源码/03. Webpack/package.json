@@ -7,13 +7,6 @@
     "build": "webpack",
     "serve": "webpack serve --open --inline --hot"
   },
-  "browserslist": [
-    "Firefox > 20",
-    "iOS >= 7",
-    "ie >= 8",
-    "last 5 versions",
-    "> 5%"
-  ],
   "devDependencies": {
     "@babel/core": "^7.14.3",
     "@babel/preset-env": "^7.14.2",
@@ -23,6 +16,7 @@
     "html-webpack-plugin": "^5.3.1",
     "less": "^4.1.1",
     "less-loader": "^9.0.0",
+    "mini-css-extract-plugin": "^1.6.0",
     "postcss-loader": "^5.3.0",
     "style-loader": "^2.0.0",
     "webpack": "^5.37.1",

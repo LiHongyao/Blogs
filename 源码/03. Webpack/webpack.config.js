@@ -1,7 +1,7 @@
 /*
  * @Author: Li-HONGYAO
  * @Date: 2021-05-25 13:39:40
- * @LastEditTime: 2021-05-25 16:55:56
+ * @LastEditTime: 2021-05-26 09:53:31
  * @LastEditors: Li-HONGYAO
  * @Description:
  * @FilePath: \03. Webpack\webpack.config.js
@@ -11,6 +11,7 @@
 const webpack = require("webpack");
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 // 2. 导出配置
 module.exports = {
@@ -52,16 +53,11 @@ module.exports = {
         test: /\.less$/,
         exclude: /node_modules/,
         use: [
-          "style-loader",
+          // "style-loader",
+          // => 使用插件中的loader代替style方式
+          MiniCssExtractPlugin.loader,
           "css-loader",
-          {
-            loader: "postcss-loader",
-            options: {
-              postcssOptions: {
-                plugins: ["autoprefixer"],
-              },
-            },
-          },
+          "postcss-loader",
           "less-loader",
         ],
       },
@@ -69,6 +65,9 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
+    new MiniCssExtractPlugin({
+      filename: "css/[name].css",
+    }),
     new HtmlWebpackPlugin({
       // 模板文件
       template: "./src/index.html",
