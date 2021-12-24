@@ -11,5 +11,13 @@
       }
     ]
   ],
-  "plugins": [["./plugins/transferText.js"]]
+  "plugins": [
+    [
+      "./plugins/transferText.js",
+      {
+        "bad": "good",
+        "dead": "alive"
+      }
+    ]
+  ]
 }

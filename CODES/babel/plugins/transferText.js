@@ -2,7 +2,7 @@
  * @Author: Lee
  * @Date: 2021-12-24 17:09:52
  * @LastEditors: Lee
- * @LastEditTime: 2021-12-24 17:38:51
+ * @LastEditTime: 2021-12-24 17:47:31
  */
 
 module.exports = function ({ types: babelTypes }) {
@@ -10,8 +10,9 @@ module.exports = function ({ types: babelTypes }) {
     name: 'plugin-example',
     visitor: {
       Identifier(path, state) {
-        if (path.node.name === 'bad') {
-          path.node.name = 'good';
+        let name = path.node.name;
+        if (state.opts[name]) {
+          path.node.name = state.opts[name];
         }
       },
     },
