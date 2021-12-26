@@ -2,35 +2,18 @@
  * @Author: Lee
  * @Date: 2021-12-26 01:56:07
  * @LastEditors: Lee
- * @LastEditTime: 2021-12-26 14:28:02
+ * @LastEditTime: 2021-12-26 18:07:45
  */
 
+// -- 导入模块
 const { src, dest, parallel, series, watch } = require('gulp');
-
-// -- 通用
-const rename = require('gulp-rename');
-const del = require('del');
 const browserSync = require('browser-sync');
 const bs = browserSync.create();
-const rev = require('gulp-rev');
-const revCollector = require('gulp-rev-collector');
-
-// -- 样式
-const less = require('gulp-less');
-const postcss = require('gulp-postcss');
+const del = require('del');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const purgecss = require('@fullhuman/postcss-purgecss');
-
-// -- 脚本
-const babel = require('gulp-babel');
-const uglify = require('gulp-uglify');
-
-// -- 模板
-const htmlmin = require('gulp-htmlmin');
-
-// -- 图片
-const imagemin = require('gulp-imagemin');
+const $ = require('gulp-load-plugins')();
 
 // -- 清除文件
 const clean = () => {
@@ -43,7 +26,7 @@ const serve = () => {
   watch('src/index.html', html);
   watch('src/**/*.less', style);
   watch('src/**/*.js', script);
-  // watch('src/images/**', image);
+  watch('src/images/**', image);
   // 初始化服务
   bs.init({
     notify: false, // 禁用浏览器右上角的 browserSync connected 提示框
@@ -53,13 +36,6 @@ const serve = () => {
     },
     port: 5000,
   });
-};
-
-// - collector
-const collector = () => {
-  return src(['rev/*.json', 'dist/**/*.html'])
-    .pipe(revCollector())
-    .pipe(dest('dist'));
 };
 
 // -- 处理样式
@@ -72,25 +48,22 @@ const style = () => {
     }),
   ];
   return src('src/styles/*.less', { base: 'src' })
-    .pipe(less())
-    .pipe(postcss(plugins))
-    .pipe(rename({ extname: '.min.css' }))
-    // .pipe(rev())
-    .pipe(dest('dist'))
-    // .pipe(rev.manifest('css-rev-manifest.json'))
-    // .pipe(dest('rev'));
+    .pipe($.less())
+    .pipe($.postcss(plugins))
+    .pipe($.rename({ extname: '.min.css' }))
+    .pipe(dest('dist'));
 };
 
 // -- 处理脚本
 const script = () => {
   return src('src/**/*.js')
     .pipe(
-      babel({
+      $.babel({
         presets: ['@babel/preset-env'],
       })
     )
-    .pipe(uglify())
-    .pipe(rename({ extname: '.min.js' }))
+    .pipe($.uglify())
+    .pipe($.rename({ extname: '.min.js' }))
     .pipe(dest('dist'));
 };
 
@@ -98,7 +71,7 @@ const script = () => {
 const html = () => {
   return src('src/**/*.html')
     .pipe(
-      htmlmin({
+      $.htmlmin({
         collapseWhitespace: true, // 去除标签之间多余的空行和空白
         minifyCSS: true, // 压缩HTML中的CSS代码
         minifyJS: true, // 压缩HTML中的JS代码
@@ -110,12 +83,12 @@ const html = () => {
 // -- 处理图片
 const image = () => {
   return src('src/images/**', { base: 'src' })
-    .pipe(imagemin())
+    .pipe($.imagemin())
     .pipe(dest('dist'));
 };
 
-const build = series(clean, parallel([style, script, html, image]), /** collector */);
-const dev = series(clean, build, serve);
+const build = series(clean, parallel([style, script, html, image]));
+const dev = series(build, serve);
 
 module.exports = {
   build,

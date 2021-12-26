@@ -1,20 +1,16 @@
-@color: 'blue';
-
-body {
-  color: @color;
-}
-
-div {
-  transform: translateY(-1px);
-}
-
-.desc {
-  color: @color;
-}
+@color: orange;
 
 .box {
   width: 500px;
   height: 300px;
-  background-color: blue;
-  // background: url("../images/gulp_logo.jpeg") no-repeat center center / contain;
+  background: url('../images/gulp_logo.jpeg') no-repeat center center / contain;
+}
+
+.desc {
+  display: inline-block;
+  margin-top: 100px;
+  color: @color;
+  letter-spacing: 1px;
+  transform: rotateZ(12deg);
+  transform-origin: center center;
 }
