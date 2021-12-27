@@ -1,97 +1,120 @@
 /*
- * @Author: Li-HONGYAO
- * @Date: 2021-05-25 13:39:40
- * @LastEditTime: 2021-05-26 09:53:31
- * @LastEditors: Li-HONGYAO
- * @Description:
- * @FilePath: \03. Webpack\webpack.config.js
+ * @Author: Lee
+ * @Date: 2021-12-27 14:52:14
+ * @LastEditors: Lee
+ * @LastEditTime: 2021-12-27 20:20:12
  */
 
 // 1. 引入模块
-const webpack = require("webpack");
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const path = require('path');
+const webpack = require('webpack');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+const glob = require('glob');
+const PurgeCSSPlugin = require('purgecss-webpack-plugin');
 
 // 2. 导出配置
 module.exports = {
-  // 配置基础路径为当前目录（默认为配置文件所在的当前目录）
-  context: path.resolve(__dirname, "./"),
-  // 打包模式 development | production
-  mode: "development",
-  // 入口 string | array | object
+  context: path.resolve(__dirname, './'),
   entry: {
-    main: "./src/main.js",
+    main: './src/app.js',
   },
-  // 出口
   output: {
-    // 输出目录/绝对路径
-    path: path.resolve(__dirname, "./dist/"),
-    // 输出文件名
-    filename: "js/[name]-bundle.js",
-    // 处理静态资源路径
-    // 静态资源最终访问路径 = output.publicPath + 资源loader或插件等配置路径
-    // 这里假设开启devServer服务
-    // publicPath: "http://localhost:8080/",
+    path: path.resolve(__dirname, './dist/'),
+    filename: '[name]-bundle-[hash].js',
   },
-  // 加载器
   module: {
     rules: [
-      // 处理脚本
+      // -- 打包脚本
       {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
-            presets: ["@babel/preset-env"],
+            presets: ['@babel/preset-env'],
           },
         },
       },
-      // 处理样式
+      // -- 打包样式
       {
         test: /\.less$/,
         exclude: /node_modules/,
         use: [
-          // "style-loader",
-          // => 使用插件中的loader代替style方式
           MiniCssExtractPlugin.loader,
-          "css-loader",
-          "postcss-loader",
-          "less-loader",
+          // 'style-loader',
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: ['postcss-preset-env'],
+              },
+            },
+          },
+          'less-loader',
         ],
+      },
+      // -- 打包图片
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        exclude: /node_modules/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'images/[hash][ext][query]',
+        },
+      },
+      // -- 处理html文件中的img图片（负责引入img）
+      {
+        test: /\.html$/,
+        exclude: /node_modules/,
+        loader: 'html-loader',
+        options: {
+          esModule: false,
+        },
+      },
+      // -- 打包字体
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        exclude: /node_modules/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[hash][ext][query]',
+        },
       },
     ],
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
+    new CleanWebpackPlugin(),
+    new webpack.BannerPlugin('版权Li-HONGYAO所有，翻版必究！'),
     new MiniCssExtractPlugin({
-      filename: "css/[name].css",
+      filename: 'css/[name]-[hash].css',
     }),
+    new CopyPlugin({
+      patterns: [{ from: 'public' }],
+    }),
+    new PurgeCSSPlugin({
+      paths: glob.sync('./src/**/*', { nodir: true }),
+    }),
+    new BundleAnalyzerPlugin(),
     new HtmlWebpackPlugin({
-      // 模板文件
-      template: "./src/index.html",
-      // 文件名(相对于output.path)，可通过文件名设置目录，如 static/pages/detail.html
-      filename: "index.html",
-      // 静态资源位置
-      inject: "body",
-      // 是否hash
-      hash: false,
-      // 指定输出文件所依赖的入口文件（*.js）的[name]
-      chunks: ["main"],
-      // 控制压缩
-      minify: {
-        collapseWhitespace: false,
-        removeComments: true,
-        removeAttributeQuotes: true,
-        removeEmptyAttributes: true,
-      },
+      // -- 模板文件
+      template: 'src/index.html',
+      // -- 文件名，相对于output.path，
+      // -- 可通过文件名设置目录，如 static/pages/detail.htm
+      filename: 'index.html',
+      // -- 指定输出文件所依赖的入口文件（*.js）的[name]
+      chunks: ['main'],
     }),
   ],
-  // 开发服务
   devServer: {
-    contentBase: path.resolve(__dirname, "./dist"),
-    host: "192.168.101.31",
-    port: 8888,
+    liveReload: true,
+    watchFiles: ['src/**'],
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
   },
 };

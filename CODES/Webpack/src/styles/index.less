@@ -1,0 +1,34 @@
+@keyframes ani {
+  to {
+    transform: translateY(100px);
+  }
+}
+@font-face {
+  font-family: 'din-regular';
+  src: url('../fonts/din-regular.otf');
+}
+
+img {
+  width: 500px;
+}
+.logo {
+  width: 200px;
+  height: 78px;
+  background: url('../images/logo.png') no-repeat center center / cover;
+  margin: 50px 0;
+}
+
+#title {
+  color: blue;
+  letter-spacing: 2px;
+  font-size: 36px;
+  font-family: "din-regular";
+  animation: ani 2s linear infinite alternate;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

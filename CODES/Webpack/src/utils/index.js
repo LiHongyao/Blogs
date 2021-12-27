@@ -1,19 +1,16 @@
 /*
- * @Author: Li-HONGYAO
- * @Date: 2021-05-25 13:38:09
- * @LastEditTime: 2021-05-25 13:38:46
- * @LastEditors: Li-HONGYAO
- * @Description:
- * @FilePath: \03. Webpack\src\utils.js
+ * @Author: Lee
+ * @Date: 2021-12-27 16:14:09
+ * @LastEditors: Lee
+ * @LastEditTime: 2021-12-27 16:14:10
  */
-class Util {
-  constructor() {}
-  static setTitle(id, title) {
-    let el = document.getElementById(id);
-    el.textContent = title;
-  }
-}
 
-module.exports = {
-  Util,
-};
+/**
+ * 修改元素标题
+ * @param {*} id
+ * @param {*} title
+ */
+export function setTitle(id, title) {
+  const dom = document.getElementById(id);
+  dom.textContent = title;
+}
