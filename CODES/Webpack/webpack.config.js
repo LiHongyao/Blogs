@@ -2,7 +2,7 @@
  * @Author: Lee
  * @Date: 2021-12-27 14:52:14
  * @LastEditors: Lee
- * @LastEditTime: 2021-12-27 20:20:12
+ * @LastEditTime: 2021-12-27 22:07:42
  */
 
 // 1. 引入模块
@@ -25,6 +25,11 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist/'),
     filename: '[name]-bundle-[hash].js',
+  },
+  resolve: {
+    alias: {
+      '@utils': path.resolve(__dirname, 'src/utils/'),
+    },
   },
   module: {
     rules: [
@@ -90,6 +95,10 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new webpack.BannerPlugin('版权Li-HONGYAO所有，翻版必究！'),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+    }),
     new MiniCssExtractPlugin({
       filename: 'css/[name]-[hash].css',
     }),
@@ -99,7 +108,7 @@ module.exports = {
     new PurgeCSSPlugin({
       paths: glob.sync('./src/**/*', { nodir: true }),
     }),
-    new BundleAnalyzerPlugin(),
+    // new BundleAnalyzerPlugin(),
     new HtmlWebpackPlugin({
       // -- 模板文件
       template: 'src/index.html',
