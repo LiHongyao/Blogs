@@ -1,29 +1,45 @@
 /*
  * @Author: Lee
- * @Date: 2021-12-25 10:13:29
+ * @Date: 2022-01-12 14:12:05
  * @LastEditors: Lee
- * @LastEditTime: 2021-12-25 12:07:54
+ * @LastEditTime: 2022-01-13 20:29:20
  */
 
-const esprima = require('esprima');
-const estraverse = require('estraverse');
-const escodegen = require('escodegen');
+// → 导入模块
+const parser = require('@babel/parser');
+const traverse = require('@babel/traverse');
+const generator = require('@babel/generator');
+const t = require('@babel/types');
 
-// -- 源代码
-const code = "const name = 'Muzili';";
-// -- 词法分析
-const ast = esprima.parseScript(code);
-// -- 遍历AST树
-estraverse.traverse(ast, {
-  enter: function (node) {
-    node.name = 'job';
-    node.value = '前端工程师';
-    node.kind = 'var';
+// → 定义一段代码字符串
+const codeString = `function square(n) {
+  return n * n;
+}`;
+
+// → 解析代码字符串
+const ast = parser.parse(codeString, {
+  sourceType: 'script', // module unambigious
+  plugins: ['jsx', 'typescript'],
+});
+
+// → 遍历节点
+traverse.default(ast, {
+  Identifier(path) {
+    // 判断是否是 name 为 n 的标志符
+    if (t.isIdentifier(path.node, { name: 'n' })) {
+      path.node.name = 'x';
+    }
   },
 });
-// -- 生成代码
-const transformCode = escodegen.generate(ast);
-// -- 输出结果
-console.log(transformCode);
+
+// → 将AST输出为目标代码
+const code = generator.default(ast, { sourceMaps: true }).code;
+console.log(code);
+/**
+ * → 输出结果
+ * function square(x) {
+ *    return x * x;
+ * }
+ */
 
 

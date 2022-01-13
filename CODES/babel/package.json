@@ -11,12 +11,12 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.16.0",
-    "@babel/core": "^7.16.5",
-    "@babel/preset-env": "^7.16.5"
-  },
-  "dependencies": {
-    "escodegen": "^2.0.0",
-    "esprima": "^4.0.1",
-    "estraverse": "^5.3.0"
+    "@babel/core": "^7.16.7",
+    "@babel/generator": "^7.16.8",
+    "@babel/parser": "^7.16.8",
+    "@babel/preset-env": "^7.16.5",
+    "@babel/traverse": "^7.16.8",
+    "@babel/types": "^7.16.8",
+    "@types/node": "^17.0.8"
   }
 }
