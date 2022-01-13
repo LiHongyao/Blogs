@@ -9,9 +9,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "@babel/generator": "^7.16.8",
     "@babel/parser": "^7.16.8",
-    "@babel/traverse": "^7.16.8"
+    "@babel/traverse": "^7.16.8",
+    "@babel/types": "^7.16.8"
   }
 }
