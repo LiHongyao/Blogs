@@ -11,13 +11,5 @@
       }
     ]
   ],
-  "plugins": [
-    [
-      "./plugins/transfer-plugin.js",
-      {
-        "bad": "good",
-        "dead": "alive"
-      }
-    ]
-  ]
+  "plugins": []
 }

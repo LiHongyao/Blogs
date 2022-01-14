@@ -2,7 +2,7 @@
  * @Author: Lee
  * @Date: 2022-01-12 14:12:05
  * @LastEditors: Lee
- * @LastEditTime: 2022-01-13 20:29:20
+ * @LastEditTime: 2022-01-14 14:26:48
  */
 
 // → 导入模块
@@ -11,10 +11,14 @@ const traverse = require('@babel/traverse');
 const generator = require('@babel/generator');
 const t = require('@babel/types');
 
+
+
 // → 定义一段代码字符串
-const codeString = `function square(n) {
+const codeString = `
+function square(n) {
   return n * n;
-}`;
+}
+n;`;
 
 // → 解析代码字符串
 const ast = parser.parse(codeString, {
@@ -24,22 +28,19 @@ const ast = parser.parse(codeString, {
 
 // → 遍历节点
 traverse.default(ast, {
-  Identifier(path) {
-    // 判断是否是 name 为 n 的标志符
-    if (t.isIdentifier(path.node, { name: 'n' })) {
-      path.node.name = 'x';
-    }
+  FunctionDeclaration(path) {
+    console.log(path.scope.generateUid());
   },
 });
 
 // → 将AST输出为目标代码
-const code = generator.default(ast, { sourceMaps: true }).code;
+const code = generator.default(ast).code;
+console.log('--------------- 目标代码 start ---------------');
 console.log(code);
+console.log('--------------- 目标代码 end ---------------');
 /**
- * → 输出结果
- * function square(x) {
- *    return x * x;
- * }
+  function square(x) {
+    return x * x;
+  }
+  x;
  */
-
-
