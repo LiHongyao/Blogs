@@ -2,47 +2,34 @@
  * @Author: Lee
  * @Date: 2022-02-11 14:03:05
  * @LastEditors: Lee
- * @LastEditTime: 2022-02-14 11:55:49
+ * @LastEditTime: 2022-02-15 18:03:04
  */
 
-function myInstance(target, fn) {
-  // 获取对象的原型
-  var proto = Object.getPrototypeOf(target);
-  // 获取构造函数的 prototype 对象
-  var prototype = fn.prototype;
-  while (true) {
-    if (!proto) return false;
-    if (proto === prototype) return true;
-    // 如果没有找到，就继续从其原型上找，Object.getPrototypeOf方法用来获取指定对象的原型
-    proto = Object.getPrototypeOf(proto);
-  }
+var obj = {
+  name: 'Lee',
+};
+var name = 'Hong';
+
+function fn(params) {
+  console.log(this.name, '----', params);
+  return 222;
 }
 
-function Person() {}
-var per = new Person();
-console.log(myInstance(per, Person)); // → true
-
-
-
-// new 
-function objectFactory() {
-  let newObject = null;
-  let constructor = Array.prototype.shift.call(arguments);
-  let result = null;
-  // 判断参数是否是一个函数
-  if (typeof constructor !== 'function') {
-    console.error('type error');
+Function.prototype.__call = function (context) {
+  // 1. 验证类型
+  if (typeof this !== 'function') {
+    console.log('type error!');
     return;
   }
-  // 新建一个空对象，对象的原型为构造函数的 prototype 对象
-  newObject = Object.create(constructor.prototype);
-  // 将 this 指向新建对象，并执行函数
-  result = constructor.apply(newObject, arguments);
-  // 判断返回对象
-  let flag =
-    result && (typeof result === 'object' || typeof result === 'function');
-  // 判断返回结果
-  return flag ? result : newObject;
-}
-// 使用方法
-// objectFactory(构造函数, 初始化参数);
+  // 2. 判断上下文是否存在，不存在则默认指向window
+  context = context || window;
+  // 3. 处理参数/因为第1个参数是指定的this,所以只截取第1个之后的参数
+  var args = [...arguments].slice(1);
+  // 4. 将函数作为上下文对象的一个属性
+  context.fn = this;
+  var returnValue = context.fn(...args);
+  delete context.fn;
+  return returnValue;
+};
+
+fn.__call();
