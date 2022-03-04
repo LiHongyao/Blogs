@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<!-- saved from url=(0085)https://gitee.com/-/ide/project/lihongyao/vite-vue-template/edit/master/-/src/main.ts -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.tippy-iOS{cursor:pointer!important}.tippy-notransition{transition:none}.tippy-popper{transition-timing-function:cubic-bezier(.165,.84,.44,1);max-width:calc(100% - 10px);pointer-events:none;outline:0}.tippy-popper[x-placement^=top] .tippy-backdrop{border-radius:40% 40% 0 0}.tippy-popper[x-placement^=top] .tippy-roundarrow{bottom:-8px;-webkit-transform-origin:50% 0;transform-origin:50% 0}.tippy-popper[x-placement^=top] .tippy-roundarrow svg{position:absolute;left:0;-webkit-transform:rotate(180deg);transform:rotate(180deg)}.tippy-popper[x-placement^=top] .tippy-arrow{border-top:8px solid #333;border-right:8px solid transparent;border-left:8px solid transparent;bottom:-7px;margin:0 6px;-webkit-transform-origin:50% 0;transform-origin:50% 0}.tippy-popper[x-placement^=top] .tippy-backdrop{-webkit-transform-origin:0 25%;transform-origin:0 25%}.tippy-popper[x-placement^=top] .tippy-backdrop[data-state=visible]{-webkit-transform:scale(1) translate(-50%,-55%);transform:scale(1) translate(-50%,-55%)}.tippy-popper[x-placement^=top] .tippy-backdrop[data-state=hidden]{-webkit-transform:scale(.2) translate(-50%,-45%);transform:scale(.2) translate(-50%,-45%);opacity:0}.tippy-popper[x-placement^=top] [data-animation=shift-toward][data-state=visible]{-webkit-transform:translateY(-10px);transform:translateY(-10px)}.tippy-popper[x-placement^=top] [data-animation=shift-toward][data-state=hidden]{opacity:0;-webkit-transform:translateY(-20px);transform:translateY(-20px)}.tippy-popper[x-placement^=top] [data-animation=perspective]{-webkit-transform-origin:bottom;transform-origin:bottom}.tippy-popper[x-placement^=top] [data-animation=perspective][data-state=visible]{-webkit-transform:perspective(700px) translateY(-10px) rotateX(0);transform:perspective(700px) translateY(-10px) rotateX(0)}.tippy-popper[x-placement^=top] [data-animation=perspective][data-state=hidden]{opacity:0;-webkit-transform:perspective(700px) translateY(0) rotateX(60deg);transform:perspective(700px) translateY(0) rotateX(60deg)}.tippy-popper[x-placement^=top] [data-animation=fade][data-state=visible]{-webkit-transform:translateY(-10px);transform:translateY(-10px)}.tippy-popper[x-placement^=top] [data-animation=fade][data-state=hidden]{opacity:0;-webkit-transform:translateY(-10px);transform:translateY(-10px)}.tippy-popper[x-placement^=top] [data-animation=shift-away][data-state=visible]{-webkit-transform:translateY(-10px);transform:translateY(-10px)}.tippy-popper[x-placement^=top] [data-animation=shift-away][data-state=hidden]{opacity:0;-webkit-transform:translateY(0);transform:translateY(0)}.tippy-popper[x-placement^=top] [data-animation=scale]{-webkit-transform-origin:bottom;transform-origin:bottom}.tippy-popper[x-placement^=top] [data-animation=scale][data-state=visible]{-webkit-transform:translateY(-10px) scale(1);transform:translateY(-10px) scale(1)}.tippy-popper[x-placement^=top] [data-animation=scale][data-state=hidden]{opacity:0;-webkit-transform:translateY(-10px) scale(.5);transform:translateY(-10px) scale(.5)}.tippy-popper[x-placement^=bottom] .tippy-backdrop{border-radius:0 0 30% 30%}.tippy-popper[x-placement^=bottom] .tippy-roundarrow{top:-8px;-webkit-transform-origin:50% 100%;transform-origin:50% 100%}.tippy-popper[x-placement^=bottom] .tippy-roundarrow svg{position:absolute;left:0;-webkit-transform:rotate(0);transform:rotate(0)}.tippy-popper[x-placement^=bottom] .tippy-arrow{border-bottom:8px solid #333;border-right:8px solid transparent;border-left:8px solid transparent;top:-7px;margin:0 6px;-webkit-transform-origin:50% 100%;transform-origin:50% 100%}.tippy-popper[x-placement^=bottom] .tippy-backdrop{-webkit-transform-origin:0 -50%;transform-origin:0 -50%}.tippy-popper[x-placement^=bottom] .tippy-backdrop[data-state=visible]{-webkit-transform:scale(1) translate(-50%,-45%);transform:scale(1) translate(-50%,-45%)}.tippy-popper[x-placement^=bottom] .tippy-backdrop[data-state=hidden]{-webkit-transform:scale(.2) translate(-50%);transform:scale(.2) translate(-50%);opacity:0}.tippy-popper[x-placement^=bottom] [data-animation=shift-toward][data-state=visible]{-webkit-transform:translateY(10px);transform:translateY(10px)}.tippy-popper[x-placement^=bottom] [data-animation=shift-toward][data-state=hidden]{opacity:0;-webkit-transform:translateY(20px);transform:translateY(20px)}.tippy-popper[x-placement^=bottom] [data-animation=perspective]{-webkit-transform-origin:top;transform-origin:top}.tippy-popper[x-placement^=bottom] [data-animation=perspective][data-state=visible]{-webkit-transform:perspective(700px) translateY(10px) rotateX(0);transform:perspective(700px) translateY(10px) rotateX(0)}.tippy-popper[x-placement^=bottom] [data-animation=perspective][data-state=hidden]{opacity:0;-webkit-transform:perspective(700px) translateY(0) rotateX(-60deg);transform:perspective(700px) translateY(0) rotateX(-60deg)}.tippy-popper[x-placement^=bottom] [data-animation=fade][data-state=visible]{-webkit-transform:translateY(10px);transform:translateY(10px)}.tippy-popper[x-placement^=bottom] [data-animation=fade][data-state=hidden]{opacity:0;-webkit-transform:translateY(10px);transform:translateY(10px)}.tippy-popper[x-placement^=bottom] [data-animation=shift-away][data-state=visible]{-webkit-transform:translateY(10px);transform:translateY(10px)}.tippy-popper[x-placement^=bottom] [data-animation=shift-away][data-state=hidden]{opacity:0;-webkit-transform:translateY(0);transform:translateY(0)}.tippy-popper[x-placement^=bottom] [data-animation=scale]{-webkit-transform-origin:top;transform-origin:top}.tippy-popper[x-placement^=bottom] [data-animation=scale][data-state=visible]{-webkit-transform:translateY(10px) scale(1);transform:translateY(10px) scale(1)}.tippy-popper[x-placement^=bottom] [data-animation=scale][data-state=hidden]{opacity:0;-webkit-transform:translateY(10px) scale(.5);transform:translateY(10px) scale(.5)}.tippy-popper[x-placement^=left] .tippy-backdrop{border-radius:50% 0 0 50%}.tippy-popper[x-placement^=left] .tippy-roundarrow{right:-16px;-webkit-transform-origin:33.33333333% 50%;transform-origin:33.33333333% 50%}.tippy-popper[x-placement^=left] .tippy-roundarrow svg{position:absolute;left:0;-webkit-transform:rotate(90deg);transform:rotate(90deg)}.tippy-popper[x-placement^=left] .tippy-arrow{border-left:8px solid #333;border-top:8px solid transparent;border-bottom:8px solid transparent;right:-7px;margin:3px 0;-webkit-transform-origin:0 50%;transform-origin:0 50%}.tippy-popper[x-placement^=left] .tippy-backdrop{-webkit-transform-origin:50% 0;transform-origin:50% 0}.tippy-popper[x-placement^=left] .tippy-backdrop[data-state=visible]{-webkit-transform:scale(1) translate(-50%,-50%);transform:scale(1) translate(-50%,-50%)}.tippy-popper[x-placement^=left] .tippy-backdrop[data-state=hidden]{-webkit-transform:scale(.2) translate(-75%,-50%);transform:scale(.2) translate(-75%,-50%);opacity:0}.tippy-popper[x-placement^=left] [data-animation=shift-toward][data-state=visible]{-webkit-transform:translateX(-10px);transform:translateX(-10px)}.tippy-popper[x-placement^=left] [data-animation=shift-toward][data-state=hidden]{opacity:0;-webkit-transform:translateX(-20px);transform:translateX(-20px)}.tippy-popper[x-placement^=left] [data-animation=perspective]{-webkit-transform-origin:right;transform-origin:right}.tippy-popper[x-placement^=left] [data-animation=perspective][data-state=visible]{-webkit-transform:perspective(700px) translateX(-10px) rotateY(0);transform:perspective(700px) translateX(-10px) rotateY(0)}.tippy-popper[x-placement^=left] [data-animation=perspective][data-state=hidden]{opacity:0;-webkit-transform:perspective(700px) translateX(0) rotateY(-60deg);transform:perspective(700px) translateX(0) rotateY(-60deg)}.tippy-popper[x-placement^=left] [data-animation=fade][data-state=visible]{-webkit-transform:translateX(-10px);transform:translateX(-10px)}.tippy-popper[x-placement^=left] [data-animation=fade][data-state=hidden]{opacity:0;-webkit-transform:translateX(-10px);transform:translateX(-10px)}.tippy-popper[x-placement^=left] [data-animation=shift-away][data-state=visible]{-webkit-transform:translateX(-10px);transform:translateX(-10px)}.tippy-popper[x-placement^=left] [data-animation=shift-away][data-state=hidden]{opacity:0;-webkit-transform:translateX(0);transform:translateX(0)}.tippy-popper[x-placement^=left] [data-animation=scale]{-webkit-transform-origin:right;transform-origin:right}.tippy-popper[x-placement^=left] [data-animation=scale][data-state=visible]{-webkit-transform:translateX(-10px) scale(1);transform:translateX(-10px) scale(1)}.tippy-popper[x-placement^=left] [data-animation=scale][data-state=hidden]{opacity:0;-webkit-transform:translateX(-10px) scale(.5);transform:translateX(-10px) scale(.5)}.tippy-popper[x-placement^=right] .tippy-backdrop{border-radius:0 50% 50% 0}.tippy-popper[x-placement^=right] .tippy-roundarrow{left:-16px;-webkit-transform-origin:66.66666666% 50%;transform-origin:66.66666666% 50%}.tippy-popper[x-placement^=right] .tippy-roundarrow svg{position:absolute;left:0;-webkit-transform:rotate(-90deg);transform:rotate(-90deg)}.tippy-popper[x-placement^=right] .tippy-arrow{border-right:8px solid #333;border-top:8px solid transparent;border-bottom:8px solid transparent;left:-7px;margin:3px 0;-webkit-transform-origin:100% 50%;transform-origin:100% 50%}.tippy-popper[x-placement^=right] .tippy-backdrop{-webkit-transform-origin:-50% 0;transform-origin:-50% 0}.tippy-popper[x-placement^=right] .tippy-backdrop[data-state=visible]{-webkit-transform:scale(1) translate(-50%,-50%);transform:scale(1) translate(-50%,-50%)}.tippy-popper[x-placement^=right] .tippy-backdrop[data-state=hidden]{-webkit-transform:scale(.2) translate(-25%,-50%);transform:scale(.2) translate(-25%,-50%);opacity:0}.tippy-popper[x-placement^=right] [data-animation=shift-toward][data-state=visible]{-webkit-transform:translateX(10px);transform:translateX(10px)}.tippy-popper[x-placement^=right] [data-animation=shift-toward][data-state=hidden]{opacity:0;-webkit-transform:translateX(20px);transform:translateX(20px)}.tippy-popper[x-placement^=right] [data-animation=perspective]{-webkit-transform-origin:left;transform-origin:left}.tippy-popper[x-placement^=right] [data-animation=perspective][data-state=visible]{-webkit-transform:perspective(700px) translateX(10px) rotateY(0);transform:perspective(700px) translateX(10px) rotateY(0)}.tippy-popper[x-placement^=right] [data-animation=perspective][data-state=hidden]{opacity:0;-webkit-transform:perspective(700px) translateX(0) rotateY(60deg);transform:perspective(700px) translateX(0) rotateY(60deg)}.tippy-popper[x-placement^=right] [data-animation=fade][data-state=visible]{-webkit-transform:translateX(10px);transform:translateX(10px)}.tippy-popper[x-placement^=right] [data-animation=fade][data-state=hidden]{opacity:0;-webkit-transform:translateX(10px);transform:translateX(10px)}.tippy-popper[x-placement^=right] [data-animation=shift-away][data-state=visible]{-webkit-transform:translateX(10px);transform:translateX(10px)}.tippy-popper[x-placement^=right] [data-animation=shift-away][data-state=hidden]{opacity:0;-webkit-transform:translateX(0);transform:translateX(0)}.tippy-popper[x-placement^=right] [data-animation=scale]{-webkit-transform-origin:left;transform-origin:left}.tippy-popper[x-placement^=right] [data-animation=scale][data-state=visible]{-webkit-transform:translateX(10px) scale(1);transform:translateX(10px) scale(1)}.tippy-popper[x-placement^=right] [data-animation=scale][data-state=hidden]{opacity:0;-webkit-transform:translateX(10px) scale(.5);transform:translateX(10px) scale(.5)}.tippy-tooltip{position:relative;color:#fff;border-radius:4px;font-size:.9rem;padding:.3rem .6rem;line-height:1.4;text-align:center;will-change:transform;background-color:#333}.tippy-tooltip[data-size=small]{padding:.2rem .4rem;font-size:.75rem}.tippy-tooltip[data-size=large]{padding:.4rem .8rem;font-size:1rem}.tippy-tooltip[data-animatefill]{overflow:hidden;background-color:transparent}.tippy-tooltip[data-interactive],.tippy-tooltip[data-interactive] path{pointer-events:auto}.tippy-tooltip[data-inertia][data-state=visible]{transition-timing-function:cubic-bezier(.54,1.5,.38,1.11)}.tippy-tooltip[data-inertia][data-state=hidden]{transition-timing-function:ease}.tippy-arrow,.tippy-roundarrow{position:absolute;width:0;height:0}.tippy-roundarrow{width:24px;height:8px;fill:#333;pointer-events:none}.tippy-backdrop{position:absolute;will-change:transform;background-color:#333;border-radius:50%;width:calc(110% + 2rem);left:50%;top:50%;z-index:-1;transition:all cubic-bezier(.46,.1,.52,.98);-webkit-backface-visibility:hidden;backface-visibility:hidden}.tippy-backdrop:after{content:"";float:left;padding-top:100%}.tippy-backdrop+.tippy-content{transition-property:opacity;will-change:opacity}.tippy-backdrop+.tippy-content[data-state=visible]{opacity:1}.tippy-backdrop+.tippy-content[data-state=hidden]{opacity:0}</style>
+<title>李鸿耀/vite-vue-template - Gitee IDE</title>
+<meta content="on" http-equiv="x-dns-prefetch-control">
+<link href="https://e.gitee.com/" rel="dns-prefetch">
+<link href="https://files.gitee.com/" rel="dns-prefetch">
+<link href="https://toscode.gitee.com/" rel="dns-prefetch">
+<link href="https://assets.gitee.com/" rel="dns-prefetch">
+<link href="https://portrait.gitee.com/" rel="dns-prefetch">
+<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://gitee.com/assets/favicon_message.ico?1581387642851">
+
+
+<meta content="always" name="referrer">
+<meta content="Gitee" property="og:site_name">
+<meta content="Object" property="og:type">
+<meta content="http://gitee.com/-/ide/project/lihongyao/vite-vue-template/edit/master/-" property="og:url">
+<meta content="https://gitee.com/static/images/logo_themecolor.png" itemprop="image" property="og:image">
+<meta content="IDE - Gitee.com" itemprop="name" property="og:title">
+<meta content="Gitee.com（码云） 是 OSCHINA.NET 推出的代码托管平台，支持 Git 和 SVN，提供免费的私有仓库托管。目前已有超过 800 万的开发者选择 Gitee。" property="og:description">
+<meta content="码云,Gitee,代码托管,Git,Git@OSC,Gitee.com,开源,内源,项目管理,版本控制,开源代码,代码分享,项目协作,开源项目托管,免费代码托管,Git代码托管,Git托管服务" name="Keywords">
+<meta content="Gitee.com（码云） 是 OSCHINA.NET 推出的代码托管平台，支持 Git 和 SVN，提供免费的私有仓库托管。目前已有超过 800 万的开发者选择 Gitee。" itemprop="description" name="Description">
+<meta content="pc,mobile" name="applicable-device">
+
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="HYCzmg9luJBKpmgWIz7hHoa45hcv1xX48a/CP6JyITMcg3QZBdRpYfvaRZKxWUhm7KTbAG41NASczfYrP/N6CQ==">
+
+<link rel="stylesheet" media="all" href="./李鸿耀_vite-vue-template - Gitee IDE_files/application-9fe9b6f3f983b67d68eadff097c4156a.css">
+<script charset="utf-8" src="./李鸿耀_vite-vue-template - Gitee IDE_files/UrlChangeTracker.js.下载"></script><script src="./李鸿耀_vite-vue-template - Gitee IDE_files/hm.js.下载"></script><script async="" src="./李鸿耀_vite-vue-template - Gitee IDE_files/sensorsdata.min.js.下载" charset="UTF-8"></script><script>
+//<![CDATA[
+window.gon = {};gon.locale="zh-CN";gon.sentry_dsn=null;gon.baidu_register_hm_push=null;gon.sensor={"server_url":"https://haveaniceday.gitee.com:3443/sa?project=production","page_type":"其他"};gon.info={"controller_path":"ide","action_name":"index","current_user":{"id":1739019,"name":"李鸿耀","username":"lihongyao","official":false,"admin":false,"avatar_url":"https://portrait.gitee.com/uploads/avatars/user/579/1739019_lihongyao_1638928517.png"}};gon.tour_env={"current_user":"lihongyao","action_name":"index","original_url":"http://gitee.com/-/ide/project/lihongyao/vite-vue-template/edit/master/-/","controller_path":"ide"};
+//]]>
+</script>
+<script src="./李鸿耀_vite-vue-template - Gitee IDE_files/sensor-42ae731632c43f0efd3963709358d23f.js.下载"></script>
+<script src="./李鸿耀_vite-vue-template - Gitee IDE_files/sentry-5.1.0-a823fb0be1b61c5d7ca4a89f0536cb0a.js.下载"></script>
+<script src="./李鸿耀_vite-vue-template - Gitee IDE_files/application-90ebb6f158b1e16d40c254454831941d.js.下载"></script>
+<script src="./李鸿耀_vite-vue-template - Gitee IDE_files/jquery.timeago.zh-CN-4a4818e98c1978d2419ab19fabcba740.js.下载"></script>
+
+
+<script src="./李鸿耀_vite-vue-template - Gitee IDE_files/jweixin-1.2.0.js.下载"></script>
+<script>
+  var title = document.title.replace(/( - Gitee| - 码云)$/, '')
+      imgUrl = '';
+  
+  document.addEventListener('DOMContentLoaded', function(event) {
+    var imgUrlEl = document.querySelector('.readme-box .markdown-body > img, .readme-box .markdown-body :not(a) > img');
+    imgUrl = imgUrlEl && imgUrlEl.getAttribute('src');
+  
+    if (!imgUrl) {
+      imgUrlEl = document.querySelector('meta[itemprop=image]');
+      imgUrl = imgUrlEl && imgUrlEl.getAttribute('content');
+      imgUrl = imgUrl || "https://gitee.com/static/images/logo_themecolor.png";
+    }
+  
+    wx.config({
+      debug: false,
+      appId: "wxff219d611a159737",
+      timestamp: "1645605089",
+      nonceStr: "144c5f504765b58dec13f941f0e66f38",
+      signature: "4bb607d7aa86fdd4c48b939ad5ae292cd0469aaa",
+      jsApiList: [
+        'onMenuShareTimeline',
+        'onMenuShareAppMessage'
+      ]
+    });
+  
+    wx.ready(function () {
+      wx.onMenuShareTimeline({
+        title: title, // 分享标题
+        link: "https://gitee.com/-/ide/project/lihongyao/vite-vue-template/edit/master/-", // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+        imgUrl: imgUrl // 分享图标
+      });
+      wx.onMenuShareAppMessage({
+        title: title, // 分享标题
+        link: "https://gitee.com/-/ide/project/lihongyao/vite-vue-template/edit/master/-", // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+        desc: document.querySelector('meta[name=Description]').getAttribute('content'),
+        imgUrl: imgUrl // 分享图标
+      });
+    });
+    wx.error(function(res){
+      console.error('err', res)
+    });
+  })
+</script>
+
+<script type="text/x-mathjax-config;executed=true">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [["$$","$$"],["\\[","\\]"]],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+    ignoreClass: "container|files",
+    processClass: "markdown-body"
+  }
+});
+</script>
+<script src="./李鸿耀_vite-vue-template - Gitee IDE_files/MathJax.js.下载"></script>
+
+<script>
+  (function () {
+    var messages = {
+      'zh-CN': {
+        addResult: '增加 <b>{term}</b>',
+        count: '已选择 {count}',
+        maxSelections: '最多 {maxCount} 个选择',
+        noResults: '未找到结果',
+        serverError: '连接服务器时发生错误'
+      },
+      'zh-TW': {
+        addResult: '增加 <b>{term}</b>',
+        count: '已選擇 {count}',
+        maxSelections: '最多 {maxCount} 個選擇',
+        noResults: '未找到結果',
+        serverError: '連接服務器時發生錯誤'
+      }
+    }
+  
+    if (messages[gon.locale]) {
+      $.fn.dropdown.settings.message = messages[gon.locale]
+    }
+  }());
+</script>
+
+<script>
+  var userAgent = navigator.userAgent;
+  var isLessIE11 = userAgent.indexOf('compatible') > -1 && userAgent.indexOf('MSIE') > -1;
+  if(isLessIE11){
+    var can_access = ""
+    if (can_access != "true"){
+      window.location.href = "/incompatible.html";
+    }
+  }
+  document.addEventListener("error", function (ev) {
+    var elem = ev.target;
+    if (elem.tagName.toLowerCase() === 'img') {
+      elem.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAAAAACIM/FCAAACh0lEQVR4Ae3ch5W0OgyG4dt/mQJ2xgQPzJoM1m3AbALrxzrf28FzsoP0HykJEEAAAUQTBBBAAAEEEEAAAQQQQAABBBBAAAEEEEAAAQQQQAABBBBAAAEEkKK0789+GK/I2ezfQB522PnS1qc8pGgXvr4tE4aY0XOUWlGImThWgyCk6DleixzE7qwBkg/MGiDPlVVAyp1VQGrPKiACDhFI6VkF5LmzCki+sg7IwDoglnVAil0IMkeG9CyUiwsxLFUVFzJJOQaKCjFCDN9RXMjIX7W6ztZXZDKKCyn8sWJvH+nca7WHDN9lROlAliPH9iRKCPI4cswFJQWxB46toLQgQ9jhn5QYZA9DOkoMUoQde5YapAxDWkoNYsOQR3KQd9CxUnIQF4S49CB9ENKlBxmDEKsFUgMCCCCAAHIrSF61f6153Ajy8nyiPr8L5MXnmm4CyT2fzN4DUvHZ+ntA2tOQBRBAAAEEEEAAAQQQ7ZBaC6TwSiDUaYHQ2yuB0MN+ft+43whyrs4rgVCjBUKTFshLC6TUAjGA3AxSaYFYLZBOC2RUAsk8h5qTg9QcbEoOsoQhQ2qQhsO5xCD5dgB5JQaZ+KBKGtKecvR81Ic0ZDjByKdDx0rSEDZ/djQbH+bkIdvfJFm98BfV8hD2zprfVdlu9PxVeyYAkciREohRAplJCaRSAplJCcQogTjSAdlyHRBvSAekJR0QRzogA+mADJkOiCPSAPEtqYBshlRAXC43hxix2QiOuEZkVERykGyNo9idIZKE0HO7XrG6OiMShlDWjstVzdPgXtUH9v0CEidAAAEEEEAAAQQQQAABBBBAAAEEEEAAAQQQQAABBBBAAAEEEEAAAQQQQP4HgjZxTpdEii0AAAAASUVORK5CYII=";
+    }
+  }, true);
+</script>
+<link rel="stylesheet" media="all" href="./李鸿耀_vite-vue-template - Gitee IDE_files/application-148600db3b4a00c5f254d809d18e507f.css"><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><script type="text/javascript" charset="utf-8" async="" src="./李鸿耀_vite-vue-template - Gitee IDE_files/21.556ae485cb6775ef1d58.js.下载"></script><style type="text/css" media="screen" class="monaco-colors">.monaco-editor .accessibilityHelpWidget { background-color: #f3f3f3; }
+.monaco-editor .accessibilityHelpWidget { box-shadow: 0 2px 8px #a8a8a8; }
+.monaco-editor, .monaco-editor-background, .monaco-editor .inputarea.ime-input { background-color: #ffffff; }
+.monaco-editor, .monaco-editor .inputarea.ime-input { color: #000000; }
+.monaco-editor .margin { background-color: #ffffff; }
+.monaco-editor .rangeHighlight { background-color: rgba(253, 255, 0, 0.2); }
+.vs-whitespace { color: rgba(51, 51, 51, 0.2) !important; }
+.monaco-editor .bracket-match { background-color: rgba(0, 100, 0, 0.1); }
+.monaco-editor .bracket-match { border: 1px solid #b9b9b9; }
+.monaco-editor .monaco-editor-overlaymessage .anchor { border-top-color: #007acc; }
+.monaco-editor .monaco-editor-overlaymessage .message { border: 1px solid #007acc; }
+.monaco-editor .monaco-editor-overlaymessage .message { background-color: #d6ecf2; }
+.monaco-editor .codelens-decoration { color: #999999; }
+.monaco-editor .codelens-decoration > a:hover { color: #0000ff !important; }
+.monaco-editor .findOptionsWidget { background-color: #f3f3f3; }
+.monaco-editor .findOptionsWidget { box-shadow: 0 2px 8px #a8a8a8; }
+.monaco-editor .findMatch { background-color: rgba(234, 92, 0, 0.33); }
+.monaco-editor .currentFindMatch { background-color: #a8ac94; }
+.monaco-editor .findScope { background-color: rgba(180, 180, 180, 0.3); }
+.monaco-editor .find-widget { background-color: #f3f3f3; }
+.monaco-editor .find-widget { box-shadow: 0 2px 8px #a8a8a8; }
+.monaco-editor .find-widget.no-results .matchesCount { color: #a1260d; }
+.monaco-editor .find-widget .monaco-sash { background-color: #c8c8c8; width: 3px !important; margin-left: -4px;}
+.monaco-editor .find-widget .monaco-checkbox .checkbox:checked + .label { border: 1px solid #007acc; }
+.monaco-editor .line-numbers { color: #cccccc; }
+.monaco-editor .current-line ~ .line-numbers { color: #0b216f; }
+.monaco-editor .view-overlays .current-line { border: 2px solid #eeeeee; }
+.monaco-editor .margin-view-overlays .current-line-margin { border: 2px solid #eeeeee; }
+.monaco-editor .lines-content .cigr { box-shadow: 1px 0 0 0 #d3d3d3 inset; }
+.monaco-editor .lines-content .cigra { box-shadow: 1px 0 0 0 #939393 inset; }
+.monaco-editor .minimap-slider, .monaco-editor .minimap-slider .minimap-slider-horizontal { background: rgba(100, 100, 100, 0.2); }
+.monaco-editor .minimap-slider:hover, .monaco-editor .minimap-slider:hover .minimap-slider-horizontal { background: rgba(100, 100, 100, 0.35); }
+.monaco-editor .minimap-slider.active, .monaco-editor .minimap-slider.active .minimap-slider-horizontal { background: rgba(0, 0, 0, 0.3); }
+.monaco-editor .minimap-shadow-visible { box-shadow: #dddddd -6px 0 6px -6px inset; }
+.monaco-editor .view-ruler { box-shadow: 1px 0 0 0 #d3d3d3 inset; }
+.monaco-editor .scroll-decoration { box-shadow: #dddddd 0 6px 6px -6px inset; }
+.monaco-editor .focused .selected-text { background-color: #add6ff; }
+.monaco-editor .selected-text { background-color: #e5ebf1; }
+.monaco-editor .cursor { background-color: #000000; border-color: #000000; color: #ffffff; }
+.monaco-editor .squiggly-error { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%206%203'%20enable-background%3D'new%200%200%206%203'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%23d60a0a'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") repeat-x bottom left; }
+.monaco-editor .squiggly-warning { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%206%203'%20enable-background%3D'new%200%200%206%203'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%23117711'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") repeat-x bottom left; }
+.monaco-editor .squiggly-info { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%206%203'%20enable-background%3D'new%200%200%206%203'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%23008000'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") repeat-x bottom left; }
+.monaco-editor .squiggly-hint { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%223%22%20width%3D%2212%22%3E%3Cg%20fill%3D%22%236c6c6c%22%3E%3Ccircle%20cx%3D%221%22%20cy%3D%221%22%20r%3D%221%22%2F%3E%3Ccircle%20cx%3D%225%22%20cy%3D%221%22%20r%3D%221%22%2F%3E%3Ccircle%20cx%3D%229%22%20cy%3D%221%22%20r%3D%221%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat bottom left; }
+.showUnused .monaco-editor .squiggly-inline-unnecessary { opacity: 0.467; will-change: opacity; }
+.monaco-editor .reference-zone-widget .ref-tree .referenceMatch { background-color: rgba(234, 92, 0, 0.3); }
+.monaco-editor .reference-zone-widget .preview .reference-decoration { background-color: rgba(245, 216, 2, 0.87); }
+.monaco-editor .reference-zone-widget .ref-tree { background-color: #f3f3f3; }
+.monaco-editor .reference-zone-widget .ref-tree { color: #646465; }
+.monaco-editor .reference-zone-widget .ref-tree .reference-file { color: #1e1e1e; }
+.monaco-editor .reference-zone-widget .ref-tree .monaco-tree.focused .monaco-tree-rows > .monaco-tree-row.selected:not(.highlighted) { background-color: rgba(51, 153, 255, 0.2); }
+.monaco-editor .reference-zone-widget .ref-tree .monaco-tree.focused .monaco-tree-rows > .monaco-tree-row.selected:not(.highlighted) { color: #6c6c6c !important; }
+.monaco-editor .reference-zone-widget .preview .monaco-editor .monaco-editor-background,.monaco-editor .reference-zone-widget .preview .monaco-editor .inputarea.ime-input {	background-color: #f2f8fc;}
+.monaco-editor .reference-zone-widget .preview .monaco-editor .margin {	background-color: #f2f8fc;}
+.monaco-editor .goto-definition-link { color: #0000ff !important; }
+.monaco-editor .hoverHighlight { background-color: rgba(173, 214, 255, 0.15); }
+.monaco-editor .monaco-editor-hover { background-color: #f3f3f3; }
+.monaco-editor .monaco-editor-hover { border: 1px solid #c8c8c8; }
+.monaco-editor .monaco-editor-hover .hover-row:not(:first-child):not(:empty) { border-top: 1px solid rgba(200, 200, 200, 0.5); }
+.monaco-editor .monaco-editor-hover a { color: #006ab1; }
+.monaco-editor .monaco-editor-hover code { background-color: rgba(220, 220, 220, 0.4); }
+.monaco-editor.vs .valueSetReplacement { outline: solid 2px #b9b9b9; }
+.monaco-editor .tokens-inspect-widget { border: 1px solid #c8c8c8; }
+.monaco-editor .tokens-inspect-widget .tokens-inspect-separator { background-color: #c8c8c8; }
+.monaco-editor .tokens-inspect-widget { background-color: #f3f3f3; }
+.monaco-editor .detected-link-active { color: #0000ff !important; }
+.monaco-editor .parameter-hints-widget { border: 1px solid #c8c8c8; }
+.monaco-editor .parameter-hints-widget.multiple .body { border-left: 1px solid rgba(200, 200, 200, 0.5); }
+.monaco-editor .parameter-hints-widget .signature.has-docs { border-bottom: 1px solid rgba(200, 200, 200, 0.5); }
+.monaco-editor .parameter-hints-widget { background-color: #f3f3f3; }
+.monaco-editor .parameter-hints-widget a { color: #006ab1; }
+.monaco-editor .parameter-hints-widget code { background-color: rgba(220, 220, 220, 0.4); }
+.monaco-editor .snippet-placeholder { background-color: rgba(10, 50, 100, 0.2); outline-color: transparent; }
+.monaco-editor .finish-snippet-placeholder { background-color: transparent; outline-color: rgba(10, 50, 100, 0.5); }
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row .monaco-highlighted-label .highlight { color: #0066bf; }
+.monaco-editor .suggest-widget { color: #000000; }
+.monaco-editor .suggest-widget a { color: #006ab1; }
+.monaco-editor .suggest-widget code { background-color: rgba(220, 220, 220, 0.4); }
+.monaco-editor .focused .selectionHighlight { background-color: rgba(173, 214, 255, 0.3); }
+.monaco-editor .selectionHighlight { background-color: rgba(173, 214, 255, 0.15); }
+.monaco-editor .wordHighlight { background-color: rgba(87, 87, 87, 0.25); }
+.monaco-editor .wordHighlightStrong { background-color: rgba(14, 99, 156, 0.25); }
+.monaco-diff-editor .diff-review-line-number { color: #cccccc; }
+.monaco-diff-editor .diff-review-shadow { box-shadow: #dddddd 0 -6px 6px -6px inset; }
+.monaco-editor .line-insert, .monaco-editor .char-insert { background-color: rgba(155, 185, 85, 0.2); }
+.monaco-diff-editor .line-insert, .monaco-diff-editor .char-insert { background-color: rgba(155, 185, 85, 0.2); }
+.monaco-editor .inline-added-margin-view-zone { background-color: rgba(155, 185, 85, 0.2); }
+.monaco-editor .line-delete, .monaco-editor .char-delete { background-color: rgba(255, 0, 0, 0.2); }
+.monaco-diff-editor .line-delete, .monaco-diff-editor .char-delete { background-color: rgba(255, 0, 0, 0.2); }
+.monaco-editor .inline-deleted-margin-view-zone { background-color: rgba(255, 0, 0, 0.2); }
+.monaco-diff-editor.side-by-side .editor.modified { box-shadow: -6px 0 5px -5px #dddddd; }
+
+.mtk1 { color: #000000; }
+.mtk2 { color: #fffffe; }
+.mtk3 { color: #808080; }
+.mtk4 { color: #ff0000; }
+.mtk5 { color: #0451a5; }
+.mtk6 { color: #0000ff; }
+.mtk7 { color: #09885a; }
+.mtk8 { color: #008000; }
+.mtk9 { color: #dd0000; }
+.mtk10 { color: #383838; }
+.mtk11 { color: #cd3131; }
+.mtk12 { color: #863b00; }
+.mtk13 { color: #af00db; }
+.mtk14 { color: #800000; }
+.mtk15 { color: #e00000; }
+.mtk16 { color: #3030c0; }
+.mtk17 { color: #666666; }
+.mtk18 { color: #778899; }
+.mtk19 { color: #ff00ff; }
+.mtk20 { color: #a31515; }
+.mtk21 { color: #4f76ac; }
+.mtk22 { color: #008080; }
+.mtk23 { color: #001188; }
+.mtk24 { color: #4864aa; }
+.mtki { font-style: italic; }
+.mtkb { font-weight: bold; }
+.mtku { text-decoration: underline; text-underline-position: under; }</style><style type="text/css" media="screen"></style><script type="text/javascript" charset="utf-8" async="" src="./李鸿耀_vite-vue-template - Gitee IDE_files/29.41fcfe6eaf1fc8033071.js.下载"></script><script type="text/javascript" charset="utf-8" async="" src="./李鸿耀_vite-vue-template - Gitee IDE_files/22.69033a2838613a8da690.js.下载"></script><script type="text/javascript" charset="utf-8" async="" src="./李鸿耀_vite-vue-template - Gitee IDE_files/20.b8de21a27a477e022164.js.下载"></script></head>
+
+
+<body class="ide-body" style=""><div id="MathJax_Message" style="display: none;"></div>
+<div class="ide-page-header">
+<header class="common-header fixed noborder" id="git-header-nav">
+<div class="ui container">
+<div class="ui menu header-menu header-container">
+<div class="git-nav-expand-bar">
+<i class="iconfont icon-mode-table"></i>
+</div>
+<div class="gitee-nav__sidebar">
+<div class="gitee-nav__sidebar-container">
+<div class="gitee-nav__sidebar-top">
+<div class="gitee-nav__avatar-box">
+<a href="https://gitee.com/lihongyao"><img class="ui avatar image lihongyao-avatar" src="./李鸿耀_vite-vue-template - Gitee IDE_files/1739019_lihongyao_1638928517.png" alt="1739019 lihongyao 1638928517">
+</a></div>
+<div class="gitee-nav__info-box">
+<a href="https://gitee.com/lihongyao">李鸿耀</a>
+</div>
+</div>
+<div class="gitee-nav__sidebar-middle">
+<div class="gitee-nav__sidebar-list">
+<ul>
+<li class="gitee-nav__sidebar-item">
+<a href="https://gitee.com/lihongyao"><i class="iconfont icon-ic-dashboard"></i>
+<span class="gitee-nav__sidebar-name">个人主页</span>
+</a></li>
+<li class="gitee-nav__sidebar-item">
+<a href="https://gitee.com/explore"><i class="iconfont icon-ic-discover"></i>
+<span class="gitee-nav__sidebar-name">开源软件</span>
+</a></li>
+<li class="gitee-nav__sidebar-item">
+<a href="https://gitee.com/enterprises"><i class="iconfont icon-ic-enterprise"></i>
+<span class="gitee-nav__sidebar-name">企业版</span>
+</a></li>
+<li class="gitee-nav__sidebar-item">
+<a href="https://gitee.com/education"><i class="iconfont icon-ic-education"></i>
+<span class="gitee-nav__sidebar-name">高校版</span>
+</a></li>
+<li class="gitee-nav__sidebar-item split-line"></li>
+<li class="gitee-nav__sidebar-item">
+<a href="https://gitee.com/search"><i class="iconfont icon-ic-search"></i>
+<span class="gitee-nav__sidebar-name">搜索</span>
+</a></li>
+<li class="gitee-nav__sidebar-item">
+<a href="https://gitee.com/help"><i class="iconfont icon-help-circle"></i>
+<span class="gitee-nav__sidebar-name">帮助中心</span>
+</a></li>
+<li class="gitee-nav__sidebar-item">
+<a href="https://gitee.com/terms"><i class="iconfont icon-file"></i>
+<span class="gitee-nav__sidebar-name">使用条款</span>
+</a></li>
+<li class="gitee-nav__sidebar-item">
+<a href="https://gitee.com/about_us"><i class="iconfont icon-issuepx"></i>
+<span class="gitee-nav__sidebar-name">关于我们</span>
+</a></li>
+<li class="gitee-nav__sidebar-item">
+<a href="https://gitee.com/profile/account_information"><i class="iconfont icon-edit"></i>
+<span class="gitee-nav__sidebar-name">设置</span>
+</a></li>
+<li class="gitee-nav__sidebar-item">
+<a rel="nofollow" data-method="delete" href="https://gitee.com/logout"><i class="iconfont icon-ic-logout"></i>
+<span class="gitee-nav__sidebar-name">
+退出
+</span>
+</a></li>
+</ul>
+</div>
+</div>
+<div class="gitee-nav__sidebar-bottom">
+<div class="gitee-nav__sidebar-close-button">
+<i class="fa fa-angle-double-left"></i>
+</div>
+</div>
+</div>
+</div>
+
+<div class="item gitosc-logo">
+<a href="https://gitee.com/"><img alt="Gitee — 基于 Git 的代码托管和研发协作平台" class="ui inline image" height="28" src="./李鸿耀_vite-vue-template - Gitee IDE_files/logo.svg" title="Gitee — 基于 Git 的代码托管和研发协作平台" width="95">
+<img alt="Gitee — 基于 Git 的代码托管和研发协作平台" class="ui inline black image" height="28" src="./李鸿耀_vite-vue-template - Gitee IDE_files/logo-black.svg" title="Gitee — 基于 Git 的代码托管和研发协作平台" width="95">
+</a></div>
+<a title="开源软件" class="item " href="https://gitee.com/explore">开源软件
+</a><a title="企业版" class="item " href="https://gitee.com/enterprises">企业版
+<sup class="ui red label">
+特惠
+</sup>
+</a><a title="高校版" class="item " href="https://gitee.com/education">高校版
+</a><a title="私有云" class="item" target="_blank" href="https://gitee.cn/?utm_source=giteecom">私有云
+</a><a title="博客" class="item" id="gitee-blog" target="_blank" href="https://blog.gitee.com/?utm_sources=site_nav">博客
+</a><div class="dropdown item ui" id="my-gitee-dropdown" tabindex="0">
+<a href="https://gitee.com/">我的</a>
+<i class="dropdown icon"></i>
+<div class="menu" tabindex="-1">
+<div class="ui active dimmer inverted js-my-gitee-dropdown-loader">
+<div class="ui loader"></div>
+</div>
+<div class="header user-enterprises">
+<a class="pull-right" target="_blank" href="https://gitee.com/lihongyao/dashboard/enterprises">全部</a>
+企业
+<span class="count"></span>
+</div>
+<div class="disabled item tip user-enterprises">
+无企业
+</div>
+<div class="header user-groups">
+<a class="pull-right" target="_blank" href="https://gitee.com/lihongyao/dashboard/groups">全部</a>
+组织
+<span class="count"></span>
+</div>
+<div class="disabled item tip user-groups">
+无组织
+</div>
+<div class="header user-programs">
+项目
+<span class="count"></span>
+</div>
+<div class="disabled item tip user-programs">
+<span class="translation_missing" title="translation missing: zh-CN.layouts.header.empty_programs">Empty Programs</span>
+</div>
+<div class="header user-projects">
+<a class="pull-right" target="_blank" href="https://gitee.com/lihongyao/projects">全部</a>
+仓库
+<span class="count"></span>
+</div>
+<div class="disabled item tip user-projects">
+无项目
+</div>
+</div>
+</div>
+<div class="center responsive-logo">
+<a href="https://gitee.com/"><img alt="Gitee — 基于 Git 的代码托管和研发协作平台" class="ui inline image" height="24" src="./李鸿耀_vite-vue-template - Gitee IDE_files/logo.svg" title="Gitee — 基于 Git 的代码托管和研发协作平台" width="85">
+<img alt="Gitee — 基于 Git 的代码托管和研发协作平台" class="ui inline black image" height="24" src="./李鸿耀_vite-vue-template - Gitee IDE_files/logo-black.svg" title="Gitee — 基于 Git 的代码托管和研发协作平台" width="85">
+</a></div>
+<div class="right menu userbar right-header" id="git-nav-user-bar">
+<form class="ui item" id="navbar-search-form" data-text-require="搜索关键字不能少于1个" data-text-filter="搜索格式不正确" action="https://gitee.com/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+<input type="hidden" name="type" id="navbar-search-type">
+<input type="hidden" name="fork_filter" id="fork_filter" value="on">
+<div class="ui search header-search">
+<input type="text" name="q" id="navbar-search-input" value="" class="prompt" placeholder="搜开源" autocomplete="off">
+<div class="results"></div></div>
+</form>
+
+<script>
+  var can_search_in_repo = 0,
+      repo = "",
+      reponame = "";
+  
+  $(function() {
+    var $search = $('#navbar-search-form .ui.search');
+    $search.search({
+      apiSettings: {
+        url: '/search/relative_project?q={query}',
+        onResponse: function (res) {
+          if (res && res.status === 200 && res.data) {
+            var query = htmlSafe($search.search('get value'));
+  
+            res.data.map(function (item) {
+              item.path_ns = '/' + item.path_ns;
+              item.icon = 'iconfont icon-project-public';
+            });
+            res.data.unshift({
+              name_ns: "在全站搜索 <b class='hl'>" + query +"</b> 相关项目",
+              path_ns: '/search?fork_filter=on&q=' + query,
+              icon: 'iconfont icon-search'
+            });
+            return res;
+          } else {
+            return { data: [] };
+          }
+        }
+      },
+      fields: {
+        results: 'data',
+        description: 'name_ns',
+        url: 'path_ns',
+        icon: 'icon'
+      },
+      minCharacters: 1,
+      maxResults: 10,
+      searchDelay: 250,
+      showNoResults: false,
+      transition: 'fade'
+    });
+  });
+</script>
+
+<div class="item ui dropdown empty" data-count-path="/notifications/unread_count" data-enable="" data-mark-notice-path="/notifications/mark" id="notice-dropdown" tabindex="0">
+<a class="remind-button" href="https://gitee.com/notifications"><i class="iconfont icon-remind"></i>
+<div class="notice-count total visible">47</div>
+</a><div class="notice-dropdown-panel menu" tabindex="-1" style="left: -165px;">
+<div class="notice-dropdown-panel-header">
+<div class="tab active" data-data-path="/notifications/notices?scope=referer" data-html-path="/notifications/referer" data-scope="referer">
+<div class="content">
+@ 我
+<div class="notice-count referer"></div>
+</div>
+</div>
+<div class="tab" data-data-path="/notifications/notices?scope=infos" data-html-path="/notifications/infos" data-scope="infos">
+<div class="content">
+通知
+<div class="notice-count infos visible">40</div>
+</div>
+</div>
+<div class="tab" data-data-path="/notifications/notices?scope=messages" data-html-path="/notifications/messages" data-scope="messages">
+<div class="content">
+私信
+<div class="notice-count messages visible">7</div>
+</div>
+</div>
+</div>
+<div class="item notice-dropdown-panel-container">
+<div class="ui dimmer over active">
+<div class="ui loader"></div>
+</div>
+<div class="notice-list"></div>
+<div class="notice-dropdown-panel-blank">
+暂没有新消息
+</div>
+</div>
+<div class="notice-dropdown-panel-footer">
+<div class="action">
+<div class="side left">
+<a class="mark-notices" href="javascript: void(0);">当前标记为已读
+</a></div>
+<div class="side right">
+<a class="load-all" target="_blank" href="javascript: void(0);">查看全部
+</a></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="ui item" id="feature-update-notice">
+<div class="notice-update-icon">
+<a class="notice-update-popup click-knowed" title="" href="https://gitee.com/help/articles/4338"><img alt="功能更新" title="" class="bubl_icon bubl-off-icon" src="./李鸿耀_vite-vue-template - Gitee IDE_files/bulb_off-24ee940be20998aace89a3f040cbc704.svg" style="display: none;">
+<img alt="功能更新" title="" class="bubl_icon bubl-on-icon" src="./李鸿耀_vite-vue-template - Gitee IDE_files/bulb_on-3986b1dc417285398e3d15671bd8f261.svg" style="display: block;">
+</a></div>
+<div class="feature-update-notice-panel menu" style="left: -119px;">
+<div class="notice-img">
+<img alt="" title="" class="notice-img-show" src="./李鸿耀_vite-vue-template - Gitee IDE_files/101042_80e5322e_8189591.gif">
+</div>
+<div class="notice-update-title">Change Request  上线</div>
+<div class="notice-update-des"><p>保护分支新增评审模式，该模式下，对分支无推送权限的成员推送代码，将会自动向保护分支提交创建 PR。</p></div>
+<div class="notice-btn-list d-flex-between">
+<button name="button" type="button" class="ui basic orange button btn-notice btn-knowed click-knowed" style="margin-right: 0">我知道了</button>
+<a class="ui button orange btn-notice btn-details click-knowed" target="_blank" href="https://gitee.com/help/articles/4338">查看详情</a>
+</div>
+</div>
+</div>
+
+<div class="ui dropdown link item" id="git-nav-create" tabindex="0">
+<i class="iconfont icon-add-thin"></i>
+<div class="right menu" tabindex="-1">
+<a class="item" href="https://gitee.com/projects/new"><i class="add square icon"></i>
+新建仓库
+</a><a class="item" href="https://gitee.com/lihongyao/codes/new"><i class="code icon"></i>
+发布代码片段
+</a><a class="item" href="https://gitee.com/organizations/new"><i class="group icon"></i>
+创建组织
+</a><a class="item" href="https://gitee.com/enterprises/new"><i class="icon iconfont icon-enterprise"></i>
+开通企业版
+</a><a class="item" href="https://gitee.com/projects/import/url"><i class="github icon"></i>
+从 GitHub / GitLab 导入仓库
+</a></div>
+</div>
+<div class="ui dropdown item" id="git-nav-user" tabindex="0">
+<img class="ui avatar image" src="./李鸿耀_vite-vue-template - Gitee IDE_files/1739019_lihongyao_1638928517.png!avatar30" alt="1739019 lihongyao 1638928517">
+<i class="dropdown icon"></i>
+<div class="right menu" tabindex="-1">
+<a class="item" href="https://gitee.com/lihongyao"><i class="iconfont icon-ic-home"></i>
+个人主页
+</a><a class="item" href="https://gitee.com/lihongyao/starred"><i class="iconfont icon-star"></i>
+我的星选集
+</a><a class="item" href="https://gitee.com/profile/account_information"><div class="mayun-icon my-ic-edit my-ic-edit-dims"></div>
+设置
+</a><div class="divider"></div>
+<a class="item" target="_blank" href="https://gitee.com/help"><div class="mayun-icon my-ic-help my-ic-help-dims"></div>
+帮助
+</a><div class="divider"></div>
+<a class="item destroy-user-session" rel="nofollow" data-method="delete" href="https://gitee.com/logout"><div class="mayun-icon my-ic-exit my-ic-exit-dims"></div>
+退出
+</a></div>
+</div>
+<script>
+  $('.destroy-user-session').on('click', function() {
+    $.cookie('access_token', null, { path: '/' });
+  })
+</script>
+
+</div>
+</div>
+</div>
+</header>
+<script>
+  Gitee.initNavbar()
+  Gitee.initRepoRemoteWay()
+  $.cookie('user_locale',null)
+</script>
+
+</div>
+<div class="ide-container">
+<link rel="stylesheet" media="all" href="./李鸿耀_vite-vue-template - Gitee IDE_files/webide.aef9861f560a57753f2481b9fc6e462e.css">
+<div id="ide-app" class="theme-light"><div class="ide-wrapper"><div class="ide-sidebar" style="width: 300px;"><div class="ide-navigation"><div class="ide-navigation-top"><div class="ide-navigation-item noselect active"><i class="iconfont icon-ic-gist ide-icon"></i> <span class="ide-navigation-text">编辑</span></div> <div class="ide-navigation-item noselect"><span class="ide-count-badge ide-commit-count-badge">1</span> <i class="iconfont icon-commit ide-icon"></i> <span class="ide-navigation-text">提交</span></div></div> <div class="ide-navigation-bottom"><div class="ide-navigation-item mini noselect"><div class="el-tooltip ide-tooltip-button" aria-describedby="el-tooltip-9275" tabindex="0"><i class="iconfont icon-appearance ide-icon"></i></div></div> <div class="ide-navigation-item mini noselect"><div class="el-tooltip ide-tooltip-button" aria-describedby="el-tooltip-4280" tabindex="0"><i class="fa fa-keyboard-o ide-icon"></i></div></div> <div class="ide-navigation-item mini noselect"><div class="el-tooltip ide-tooltip-button" aria-describedby="el-tooltip-7432" tabindex="0"><i class="iconfont icon-editor-about ide-icon"></i></div></div></div></div> <div class="ide-action-panel"><div class="ide-tree-wrap"><div class="ide-tree-panel"><div class="ide-project-info shrink-wrap"><i class="iconfont icon-project ide-icon"></i> <span title="vite-vue-template" class="ide-branch-project-name shrink-wrap">vite-vue-template</span></div> <div class="ide-tree-scrolling"><div class="ide-tree-header"><div class="ide-tree-header-inner"><div class="header-title">文件（104）</div> <div class="header-actions"><div class="el-tooltip ide-tooltip-button" aria-describedby="el-tooltip-3787" tabindex="0"><i class="fa fa-search"></i></div> <div class="ide-dropdown"><div class="ide-dropdown-text"><span class="add-button"><i class="fa fa-plus"></i></span></div> <div class="ide-dropdown-menu top-end" style="display: none;"><div class="ide-dropdown-item"><span class="ide-dropdown-item-name">
+      新建文件
+    </span></div><div class="ide-dropdown-item"><span class="ide-dropdown-item-name">
+      新建目录
+    </span></div></div></div></div></div></div> <div class="ide-tree-list"><div class="ide-tree-item"><div title="mock" class="ide-tree-item-content noselect" style="padding-left: 16px;"><div class="ide-tree-file-name"><div class="ide-tree-icon"><i class="fa fa-folder ide-icon ide-icon-folder"></i> <!----></div> <span class="tree-item-nametext">mock</span></div> <div class="ide-dropdown-menu top-start" style="top: 100%; left: 0px; right: auto; display: none;"><div class="ide-dropdown-item"><span class="ide-dropdown-item-name">
+      新建文件
+    </span></div><div class="ide-dropdown-item"><span class="ide-dropdown-item-name">
+      新建目录
+    </span></div></div></div> <!----></div><div class="ide-tree-item"><div title="public" class="ide-tree-item-content noselect" style="padding-left: 16px;"><div class="ide-tree-file-name"><div class="ide-tree-icon"><i class="fa fa-folder ide-icon ide-icon-folder"></i> <!----></div> <span class="tree-item-nametext">public</span></div> <div class="ide-dropdown-menu top-start" style="top: 100%; left: 0px; right: auto; display: none;"><div class="ide-dropdown-item"><span class="ide-dropdown-item-name">
+      新建文件
+    </span></div><div class="ide-dropdown-item"><span class="ide-dropdown-item-name">
+      新建目录
+    </span></div></div></div> <!----></div><div class="ide-tree-item"><div title="src" class="ide-tree-item-content noselect" style="padding-left: 16px;"><div class="ide-tree-file-name"><div class="ide-tree-icon"><i class="fa fa-folder-open ide-icon ide-icon-folder"></i> <!----></div> <span class="tree-item-nametext">src</span></div> <div class="ide-dropdown-menu top-start" style="top: 100%; left: 0px; right: auto; display: none;"><div class="ide-dropdown-item"><span class="ide-dropdown-item-name">
+      新建文件
+    </span></div><div class="ide-dropdown-item"><span class="ide-dropdown-item-name">
+      新建目录
+    </span></div></div></div> <div class="ide-tree-list"><div class="ide-tree-item"><div title="api" class="ide-tree-item-content noselect" style="padding-left: 32px;"><div class="ide-tree-file-name"><div class="ide-tree-icon"><i class="fa fa-folder ide-icon ide-icon-folder"></i> <!----></div> <span class="tree-item-nametext">api</span></div> <div class="ide-dropdown-menu top-start" style="top: 100%; left: 0px; right: auto; display: none;"><div class="ide-dropdown-item"><span class="ide-dropdown-item-name">
+      新建文件
+    </span></div><div class="ide-dropdown-item"><span class="ide-dropdown-item-name">
+      新建目录
+    </span></div></div></div> <!----></div><div class="ide-tree-item"><div title="assets" class="ide-tree-item-content noselect" style="padding-left: 32px;"><div class="ide-tree-file-name"><div class="ide-tree-icon"><i class="fa fa-folder ide-icon ide-icon-folder"></i> <!----></div> <span class="tree-item-nametext">assets</span></div> <div class="ide-dropdown-menu top-start" style="top: 100%; left: 0px; right: auto; display: none;"><div class="ide-dropdown-item"><span class="ide-dropdown-item-name">
+      新建文件
+    </span></div><div class="ide-dropdown-item"><span class="ide-dropdown-item-name">
+      新建目录
+    </span></div></div></div> <!----></div><div class="ide-tree-item"><div title="components" class="ide-tree-item-content noselect" style="padding-left: 32px;"><div class="ide-tree-file-name"><div class="ide-tree-icon"><i class="fa fa-folder ide-icon ide-icon-folder"></i> <!----></div> <span class="tree-item-nametext">components</span></div> <div class="ide-dropdown-menu top-start" style="top: 100%; left: 0px; right: auto; display: none;"><div class="ide-dropdown-item"><span class="ide-dropdown-item-name">
+      新建文件
+    </span></div><div class="ide-dropdown-item"><span class="ide-dropdown-item-name">
+      新建目录
+    </span></div></div></div> <!----></div><div class="ide-tree-item"><div title="directives" class="ide-tree-item-content noselect" style="padding-left: 32px;"><div class="ide-tree-file-name"><div class="ide-tree-icon"><i class="fa fa-folder ide-icon ide-icon-folder"></i> <!----></div> <span class="tree-item-nametext">directives</span></div> <div class="ide-dropdown-menu top-start" style="top: 100%; left: 0px; right: auto; display: none;"><div class="ide-dropdown-item"><span class="ide-dropdown-item-name">
+      新建文件
+    </span></div><div class="ide-dropdown-item"><span class="ide-dropdown-item-name">
+      新建目录
+    </span></div></div></div> <!----></div><div class="ide-tree-item"><div title="filters" class="ide-tree-item-content noselect" style="padding-left: 32px;"><div class="ide-tree-file-name"><div class="ide-tree-icon"><i class="fa fa-folder ide-icon ide-icon-folder"></i> <!----></div> <span class="tree-item-nametext">filters</span></div> <div class="ide-dropdown-menu top-start" style="top: 100%; left: 0px; right: auto; display: none;"><div class="ide-dropdown-item"><span class="ide-dropdown-item-name">
+      新建文件
+    </span></div><div class="ide-dropdown-item"><span class="ide-dropdown-item-name">
+      新建目录
+    </span></div></div></div> <!----></div><div class="ide-tree-item"><div title="hooks" class="ide-tree-item-content noselect" style="padding-left: 32px;"><div class="ide-tree-file-name"><div class="ide-tree-icon"><i class="fa fa-folder ide-icon ide-icon-folder"></i> <!----></div> <span class="tree-item-nametext">hooks</span></div> <div class="ide-dropdown-menu top-start" style="top: 100%; left: 0px; right: auto; display: none;"><div class="ide-dropdown-item"><span class="ide-dropdown-item-name">
+      新建文件
+    </span></div><div class="ide-dropdown-item"><span class="ide-dropdown-item-name">
+      新建目录
+    </span></div></div></div> <!----></div><div class="ide-tree-item"><div title="pages" class="ide-tree-item-content noselect" style="padding-left: 32px;"><div class="ide-tree-file-name"><div class="ide-tree-icon"><i class="fa fa-folder ide-icon ide-icon-folder"></i> <!----></div> <span class="tree-item-nametext">pages</span></div> <div class="ide-dropdown-menu top-start" style="top: 100%; left: 0px; right: auto; display: none;"><div class="ide-dropdown-item"><span class="ide-dropdown-item-name">
+      新建文件
+    </span></div><div class="ide-dropdown-item"><span class="ide-dropdown-item-name">
+      新建目录
+    </span></div></div></div> <!----></div><div class="ide-tree-item"><div title="router" class="ide-tree-item-content noselect" style="padding-left: 32px;"><div class="ide-tree-file-name"><div class="ide-tree-icon"><i class="fa fa-folder ide-icon ide-icon-folder"></i> <!----></div> <span class="tree-item-nametext">router</span></div> <div class="ide-dropdown-menu top-start" style="top: 100%; left: 0px; right: auto; display: none;"><div class="ide-dropdown-item"><span class="ide-dropdown-item-name">
+      新建文件
+    </span></div><div class="ide-dropdown-item"><span class="ide-dropdown-item-name">
+      新建目录
+    </span></div></div></div> <!----></div><div class="ide-tree-item"><div title="store" class="ide-tree-item-content noselect" style="padding-left: 32px;"><div class="ide-tree-file-name"><div class="ide-tree-icon"><i class="fa fa-folder ide-icon ide-icon-folder"></i> <!----></div> <span class="tree-item-nametext">store</span></div> <div class="ide-dropdown-menu top-start" style="top: 100%; left: 0px; right: auto; display: none;"><div class="ide-dropdown-item"><span class="ide-dropdown-item-name">
+      新建文件
+    </span></div><div class="ide-dropdown-item"><span class="ide-dropdown-item-name">
+      新建目录
+    </span></div></div></div> <!----></div><div class="ide-tree-item"><div title="typings" class="ide-tree-item-content noselect" style="padding-left: 32px;"><div class="ide-tree-file-name"><div class="ide-tree-icon"><i class="fa fa-folder ide-icon ide-icon-folder"></i> <!----></div> <span class="tree-item-nametext">typings</span></div> <div class="ide-dropdown-menu top-start" style="top: 100%; left: 0px; right: auto; display: none;"><div class="ide-dropdown-item"><span class="ide-dropdown-item-name">
+      新建文件
+    </span></div><div class="ide-dropdown-item"><span class="ide-dropdown-item-name">
+      新建目录
+    </span></div></div></div> <!----></div><div class="ide-tree-item"><div title="utils" class="ide-tree-item-content noselect" style="padding-left: 32px;"><div class="ide-tree-file-name"><div class="ide-tree-icon"><i class="fa fa-folder ide-icon ide-icon-folder"></i> <!----></div> <span class="tree-item-nametext">utils</span></div> <div class="ide-dropdown-menu top-start" style="top: 100%; left: 0px; right: auto; display: none;"><div class="ide-dropdown-item"><span class="ide-dropdown-item-name">
+      新建文件
+    </span></div><div class="ide-dropdown-item"><span class="ide-dropdown-item-name">
+      新建目录
+    </span></div></div></div> <!----></div><div class="ide-tree-item"><div title="App.vue" class="ide-tree-item-content noselect" style="padding-left: 32px;"><div class="ide-tree-file-name"><div class="ide-tree-icon"><i class="file-icon ide-icon vue-icon light-green"></i> <!----></div> <span class="tree-item-nametext">App.vue</span></div> <!----></div> <!----></div><div class="ide-tree-item"><div title="env.d.ts" class="ide-tree-item-content noselect" style="padding-left: 32px;"><div class="ide-tree-file-name"><div class="ide-tree-icon"><i class="file-icon ide-icon ts-icon medium-blue"></i> <!----></div> <span class="tree-item-nametext">env.d.ts</span></div> <!----></div> <!----></div><div class="ide-tree-item"><div title="index.css" class="ide-tree-item-content noselect" style="padding-left: 32px;"><div class="ide-tree-file-name"><div class="ide-tree-icon"><i class="file-icon ide-icon css3-icon medium-blue"></i> <!----></div> <span class="tree-item-nametext">index.css</span></div> <!----></div> <!----></div><div class="ide-tree-item"><div title="main.ts" class="ide-tree-item-content noselect ide-tree-file-active ide-tree-file-opened" style="padding-left: 32px;"><div class="ide-tree-file-name"><div class="ide-tree-icon"><i class="file-icon ide-icon ts-icon medium-blue"></i> <!----></div> <span class="tree-item-nametext">main.ts</span></div> <!----></div> <!----></div></div></div><div class="ide-tree-item"><div title=".env.dev" class="ide-tree-item-content noselect" style="padding-left: 16px;"><div class="ide-tree-file-name"><div class="ide-tree-icon"><i class="file-icon ide-icon gear-icon dark-green"></i> <!----></div> <span class="tree-item-nametext">.env.dev</span></div> <!----></div> <!----></div><div class="ide-tree-item"><div title=".env.production" class="ide-tree-item-content noselect" style="padding-left: 16px;"><div class="ide-tree-file-name"><div class="ide-tree-icon"><i class="file-icon ide-icon gear-icon dark-green"></i> <!----></div> <span class="tree-item-nametext">.env.production</span></div> <!----></div> <!----></div><div class="ide-tree-item"><div title=".env.test" class="ide-tree-item-content noselect" style="padding-left: 16px;"><div class="ide-tree-file-name"><div class="ide-tree-icon"><i class="file-icon ide-icon gear-icon dark-green"></i> <!----></div> <span class="tree-item-nametext">.env.test</span></div> <!----></div> <!----></div><div class="ide-tree-item"><div title=".gitignore" class="ide-tree-item-content noselect" style="padding-left: 16px;"><div class="ide-tree-file-name"><div class="ide-tree-icon"><i class="file-icon ide-icon git-icon medium-red"></i> <!----></div> <span class="tree-item-nametext">.gitignore</span></div> <!----></div> <!----></div><div class="ide-tree-item"><div title="README.md" class="ide-tree-item-content noselect" style="padding-left: 16px;"><div class="ide-tree-file-name"><div class="ide-tree-icon"><i class="file-icon ide-icon book-icon medium-blue"></i> <!----></div> <span class="tree-item-nametext">README.md</span></div> <!----></div> <!----></div><div class="ide-tree-item"><div title="index.html" class="ide-tree-item-content noselect" style="padding-left: 16px;"><div class="ide-tree-file-name"><div class="ide-tree-icon"><i class="file-icon ide-icon html5-icon medium-orange"></i> <!----></div> <span class="tree-item-nametext">index.html</span></div> <!----></div> <!----></div><div class="ide-tree-item"><div title="package-lock.json" class="ide-tree-item-content noselect" style="padding-left: 16px;"><div class="ide-tree-file-name"><div class="ide-tree-icon"><i class="file-icon ide-icon database-icon medium-yellow"></i> <!----></div> <span class="tree-item-nametext">package-lock.json</span></div> <!----></div> <!----></div><div class="ide-tree-item"><div title="package.json" class="ide-tree-item-content noselect" style="padding-left: 16px;"><div class="ide-tree-file-name"><div class="ide-tree-icon"><i class="file-icon ide-icon npm-icon medium-red"></i> <!----></div> <span class="tree-item-nametext">package.json</span></div> <!----></div> <!----></div><div class="ide-tree-item"><div title="postcss.config.js" class="ide-tree-item-content noselect" style="padding-left: 16px;"><div class="ide-tree-file-name"><div class="ide-tree-icon"><i class="file-icon ide-icon postcss-icon medium-yellow"></i> <!----></div> <span class="tree-item-nametext">postcss.config.js</span></div> <!----></div> <!----></div><div class="ide-tree-item"><div title="tsconfig.json" class="ide-tree-item-content noselect" style="padding-left: 16px;"><div class="ide-tree-file-name"><div class="ide-tree-icon"><i class="file-icon ide-icon database-icon medium-yellow"></i> <!----></div> <span class="tree-item-nametext">tsconfig.json</span></div> <!----></div> <!----></div><div class="ide-tree-item"><div title="vite.config.ts" class="ide-tree-item-content noselect ide-tree-file-opened" style="padding-left: 16px;"><div class="ide-tree-file-name"><div class="ide-tree-icon"><i class="file-icon ide-icon ts-icon medium-blue"></i> <!----></div> <span class="tree-item-nametext">vite.config.ts</span></div> <!----></div> <!----></div><div class="ide-tree-item"><div title="yarn.lock" class="ide-tree-item-content noselect" style="padding-left: 16px;"><div class="ide-tree-file-name"><div class="ide-tree-icon"><i class="file-icon ide-icon yarn-icon medium-blue"></i> <!----></div> <span class="tree-item-nametext">yarn.lock</span></div> <!----></div> <!----></div></div></div></div></div> <div class="ide-commit-panel-wrap" style="display: none;"><div class="ide-commit-panel"><div class="ide-commit-header"><div class="header-title">
+      提交
+    </div></div> <div class="ide-commit-list"><!----> <!----> <section class="ide-commit-panel-section"><header class="ide-commit-panel-header"><div class="header-title">更改</div> <div class="header-actions"><div class="el-tooltip ide-tooltip-button ide-icon" aria-describedby="el-tooltip-9458" tabindex="0"><i class="fa fa-undo"></i></div> <div class="el-tooltip ide-tooltip-button ide-icon" aria-describedby="el-tooltip-9823" tabindex="0"><i class="fa fa-plus"></i></div> <span class="ide-count-badge noselect">1</span></div></header> <div class="ide-commit-panel-content"><div class="file-item"><i class="file-icon ide-icon ts-icon medium-blue"></i> <div class="commit-file-name">
+              main.ts
+            </div> <div class="commit-file-actions"><div class="el-tooltip ide-tooltip-button ide-icon" aria-describedby="el-tooltip-2881" tabindex="0"><i class="fa fa-undo"></i></div> <div class="el-tooltip ide-tooltip-button ide-icon" aria-describedby="el-tooltip-5597" tabindex="0"><i class="fa fa-plus"></i></div></div></div></div></section></div> <div class="ide-commit-message-wrap"><div class="ide-commit-message"><textarea placeholder="请输入提交信息(Ctrl + Enter 提交)" rows="1" class="ide-commit-message-input" style="overflow: hidden; overflow-wrap: break-word;"></textarea> <div class="ide-commit-type"><div><label role="radio" aria-checked="true" tabindex="0" class="el-radio ide-commit-type-item is-checked"><span class="el-radio__input is-checked"><span class="el-radio__inner"></span><input type="radio" aria-hidden="true" tabindex="-1" class="el-radio__original" value="current"></span><span class="el-radio__label">
+        提交到当前分支
+      <!----></span></label> <!----></div><div><label role="radio" tabindex="0" class="el-radio ide-commit-type-item"><span class="el-radio__input"><span class="el-radio__inner"></span><input type="radio" aria-hidden="true" tabindex="-1" class="el-radio__original" value="other"></span><span class="el-radio__label">
+        提交到新分支
+      <!----></span></label> <!----></div><div><label role="radio" tabindex="0" class="el-radio ide-commit-type-item"><span class="el-radio__input"><span class="el-radio__inner"></span><input type="radio" aria-hidden="true" tabindex="-1" class="el-radio__original" value="lightPR"></span><span class="el-radio__label">
+        提交并创建轻量级 PR
+      <!----></span></label> <!----></div></div> <div class="el-tooltip ide-tooltip-button ide-commit-button" aria-describedby="el-tooltip-3899" tabindex="0"><button disabled="disabled" type="button" class="el-button fluid el-button--primary el-button--mini is-disabled"><!----><!----><span>
+      提交
+    </span></button></div></div></div></div></div> <div class="drag-handle drag-right" size="300" style="cursor: col-resize;"></div></div></div> <div class="ide-main"><div class="ide-editor-toolbar"><div class="ide-editor-toolbar-left ide-editor-toolbar-section"><div class="el-tooltip ide-tooltip-button" aria-describedby="el-tooltip-4522" tabindex="0"><i class="iconfont icon-undo ide-icon"></i></div> <div class="el-tooltip ide-tooltip-button" aria-describedby="el-tooltip-4199" tabindex="0"><i class="iconfont icon-redo ide-icon"></i></div> <div class="ide-toolbar-divider"></div> <div class="el-tooltip ide-tooltip-button" aria-describedby="el-tooltip-8812" tabindex="0"><i class="iconfont icon-editor-search ide-icon"></i></div> <div class="el-tooltip ide-tooltip-button" aria-describedby="el-tooltip-7018" tabindex="0"><i class="iconfont icon-editor-replace ide-icon"></i></div> <div class="el-tooltip ide-tooltip-button" aria-describedby="el-tooltip-7821" tabindex="0"><i class="iconfont icon-jumpto ide-icon"></i></div> <div class="ide-toolbar-divider"></div> <div class="ide-tooltip-button"><div class="el-dropdown"><span class="ide-dropdown-text el-dropdown-selfdefine" aria-haspopup="list" aria-controls="dropdown-menu-5940" role="button" tabindex="0"><i class="iconfont icon-fontsize ide-icon"></i> <i class="fa fa-caret-down"></i></span> <ul class="el-dropdown-menu el-popper" id="dropdown-menu-5940" style="display: none;"><li tabindex="-1" class="el-dropdown-menu__item is-active"><!---->
+              12px
+            </li><li tabindex="-1" class="el-dropdown-menu__item"><!---->
+              13px
+            </li><li tabindex="-1" class="el-dropdown-menu__item"><!---->
+              14px
+            </li><li tabindex="-1" class="el-dropdown-menu__item"><!---->
+              15px
+            </li><li tabindex="-1" class="el-dropdown-menu__item"><!---->
+              16px
+            </li><li tabindex="-1" class="el-dropdown-menu__item"><!---->
+              17px
+            </li><li tabindex="-1" class="el-dropdown-menu__item"><!---->
+              18px
+            </li><li tabindex="-1" class="el-dropdown-menu__item"><!---->
+              20px
+            </li><li tabindex="-1" class="el-dropdown-menu__item"><!---->
+              22px
+            </li><li tabindex="-1" class="el-dropdown-menu__item"><!---->
+              24px
+            </li><li tabindex="-1" class="el-dropdown-menu__item"><!---->
+              26px
+            </li><li tabindex="-1" class="el-dropdown-menu__item"><!---->
+              28px
+            </li><li tabindex="-1" class="el-dropdown-menu__item"><!---->
+              32px
+            </li></ul></div></div> <div class="ide-toolbar-divider"></div> <div class="el-tooltip ide-tooltip-button" aria-describedby="el-tooltip-2622" tabindex="0"><i class="iconfont icon-linenumber ide-icon"></i></div> <div class="el-tooltip ide-tooltip-button" aria-describedby="el-tooltip-1443" tabindex="0"><i class="iconfont icon-softwrap ide-icon"></i></div></div> <div class="ide-editor-toolbar-right ide-editor-toolbar-section"><div class="el-tooltip ide-tooltip-button" aria-describedby="el-tooltip-9856" tabindex="0"><a href="https://gitee.com/lihongyao/vite-vue-template/blob/master/src/main.ts" class="ide-exit-link"><i class="iconfont icon-editor-exit ide-icon"></i></a></div></div></div> <div class="ide-file-edit-pane"><div class="ide-file-tabs el-scrollbar"><div class="ide-file-tabs-wrap el-scrollbar__wrap" style="margin-bottom: -17px; margin-right: -17px;"><div class="el-scrollbar__view ide-file-tabs-inner"><ul class="list-inner"><li class="ide-file-tab noselect"><div title="vite.config.ts" class="ide-file-tab-content"><i class="file-icon ide-icon ts-icon medium-blue"></i> <span class="ide-tab-name">
+      vite.config.ts
+    </span> <i class="ide-tab-viewmode">
+      
+    </i></div> <i class="fa fa-close close-icon"></i></li><li class="ide-file-tab noselect ide-file-tab-active"><div title="src/main.ts" class="ide-file-tab-content"><i class="file-icon ide-icon ts-icon medium-blue"></i> <span class="ide-tab-name">
+      main.ts
+    </span> <i class="ide-tab-viewmode">
+      
+    </i></div> <i class="fa fa-close close-icon"></i></li></ul></div></div><div class="el-scrollbar__bar is-horizontal"><div class="el-scrollbar__thumb" style="transform: translateX(0%);"></div></div><div class="el-scrollbar__bar is-vertical"><div class="el-scrollbar__thumb" style="transform: translateY(0%);"></div></div></div> <div class="ide-file-editor"><div class="ide-mode-tabs"><div class="ide-mode-tabs-header"><div class="ide-mode-tabs-item is-active">编辑</div> <!----></div> <a target="_blank" href="https://gitee.com/lihongyao/vite-vue-template/blob/master/src/main.ts" class="ide-file-external-link">
+    在仓库中打开
+    <i class="fa fa-external-link"></i></a></div> <div class="ide-file-mode"><div class="vue-monaco-editor" style="visibility: visible;"><div class="vue-monaco-editor-container showUnused" data-keybinding-context="1" data-mode-id="typescript" style="width: 100%; height: 100%;"><div class="monaco-editor vs focused" data-uri="gitee:modified/src/main.ts" style="width: 1619px; height: 785px;"><div data-mprt="3" class="overflow-guard" style="width: 1619px; height: 785px;"><div class="margin" role="presentation" aria-hidden="true" style="position: absolute; will-change: transform; top: -500px; height: 1969px; width: 59px;"><div class="glyph-margin" style="left: 0px; width: 0px; height: 1969px;"></div><div class="margin-view-zones" role="presentation" aria-hidden="true" style="position: absolute;"></div><div class="margin-view-overlays focused" role="presentation" aria-hidden="true" style="position: absolute; width: 59px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 12px; line-height: 16px; letter-spacing: 0px; height: 1953px;"><div style="position:absolute;top:496px;width:100%;height:16px;"><div class="line-numbers" style="left:0px;width:33px;">32</div></div><div style="position:absolute;top:512px;width:100%;height:16px;"><div class="line-numbers" style="left:0px;width:33px;">33</div></div><div style="position:absolute;top:528px;width:100%;height:16px;"><div class="cldr folding" style="left:33px;width:26px;"></div><div class="line-numbers" style="left:0px;width:33px;">34</div></div><div style="position:absolute;top:544px;width:100%;height:16px;"><div class="cldr folding" style="left:33px;width:26px;"></div><div class="line-numbers" style="left:0px;width:33px;">35</div></div><div style="position:absolute;top:560px;width:100%;height:16px;"><div class="line-numbers" style="left:0px;width:33px;">36</div></div><div style="position:absolute;top:576px;width:100%;height:16px;"><div class="line-numbers" style="left:0px;width:33px;">37</div></div><div style="position:absolute;top:592px;width:100%;height:16px;"><div class="line-numbers" style="left:0px;width:33px;">38</div></div><div style="position:absolute;top:608px;width:100%;height:16px;"><div class="line-numbers" style="left:0px;width:33px;">39</div></div><div style="position:absolute;top:624px;width:100%;height:16px;"><div class="line-numbers" style="left:0px;width:33px;">40</div></div><div style="position:absolute;top:640px;width:100%;height:16px;"><div class="line-numbers" style="left:0px;width:33px;">41</div></div><div style="position:absolute;top:656px;width:100%;height:16px;"><div class="line-numbers" style="left:0px;width:33px;">42</div></div><div style="position:absolute;top:672px;width:100%;height:16px;"><div class="line-numbers" style="left:0px;width:33px;">43</div></div><div style="position:absolute;top:688px;width:100%;height:16px;"><div class="line-numbers" style="left:0px;width:33px;">44</div></div><div style="position:absolute;top:704px;width:100%;height:16px;"><div class="line-numbers" style="left:0px;width:33px;">45</div></div><div style="position:absolute;top:720px;width:100%;height:16px;"><div class="line-numbers" style="left:0px;width:33px;">46</div></div><div style="position:absolute;top:736px;width:100%;height:16px;"><div class="line-numbers" style="left:0px;width:33px;">47</div></div><div style="position:absolute;top:752px;width:100%;height:16px;"><div class="line-numbers" style="left:0px;width:33px;">48</div></div><div style="position:absolute;top:768px;width:100%;height:16px;"><div class="line-numbers" style="left:0px;width:33px;">49</div></div><div style="position:absolute;top:784px;width:100%;height:16px;"><div class="line-numbers" style="left:0px;width:33px;">50</div></div><div style="position:absolute;top:800px;width:100%;height:16px;"><div class="line-numbers" style="left:0px;width:33px;">51</div></div><div style="position:absolute;top:816px;width:100%;height:16px;"><div class="line-numbers" style="left:0px;width:33px;">52</div></div><div style="position:absolute;top:832px;width:100%;height:16px;"><div class="line-numbers" style="left:0px;width:33px;">53</div></div><div style="position:absolute;top:848px;width:100%;height:16px;"><div class="current-line" style="width:59px; height:16px;"></div><div class="line-numbers" style="left:0px;width:33px;">54</div></div><div style="position:absolute;top:864px;width:100%;height:16px;"><div class="line-numbers" style="left:0px;width:33px;">55</div></div><div style="position:absolute;top:880px;width:100%;height:16px;"><div class="line-numbers" style="left:0px;width:33px;">56</div></div><div style="position:absolute;top:896px;width:100%;height:16px;"><div class="line-numbers" style="left:0px;width:33px;">57</div></div><div style="position:absolute;top:912px;width:100%;height:16px;"><div class="line-numbers" style="left:0px;width:33px;">58</div></div><div style="position:absolute;top:928px;width:100%;height:16px;"><div class="line-numbers" style="left:0px;width:33px;">59</div></div><div style="position:absolute;top:944px;width:100%;height:16px;"><div class="line-numbers" style="left:0px;width:33px;">60</div></div><div style="position:absolute;top:960px;width:100%;height:16px;"><div class="line-numbers" style="left:0px;width:33px;">61</div></div><div style="position:absolute;top:976px;width:100%;height:16px;"><div class="line-numbers" style="left:0px;width:33px;">62</div></div><div style="position:absolute;top:992px;width:100%;height:16px;"><div class="line-numbers" style="left:0px;width:33px;">63</div></div><div style="position:absolute;top:1008px;width:100%;height:16px;"><div class="line-numbers" style="left:0px;width:33px;">64</div></div><div style="position:absolute;top:1024px;width:100%;height:16px;"><div class="cldr folding" style="left:33px;width:26px;"></div><div class="line-numbers" style="left:0px;width:33px;">65</div></div><div style="position:absolute;top:1040px;width:100%;height:16px;"><div class="line-numbers" style="left:0px;width:33px;">66</div></div><div style="position:absolute;top:1056px;width:100%;height:16px;"><div class="line-numbers" style="left:0px;width:33px;">67</div></div><div style="position:absolute;top:1072px;width:100%;height:16px;"><div class="line-numbers" style="left:0px;width:33px;">68</div></div><div style="position:absolute;top:1088px;width:100%;height:16px;"><div class="line-numbers" style="left:0px;width:33px;">69</div></div><div style="position:absolute;top:1104px;width:100%;height:16px;"><div class="cldr folding" style="left:33px;width:26px;"></div><div class="line-numbers" style="left:0px;width:33px;">70</div></div><div style="position:absolute;top:1120px;width:100%;height:16px;"><div class="line-numbers" style="left:0px;width:33px;">71</div></div><div style="position:absolute;top:1136px;width:100%;height:16px;"><div class="line-numbers" style="left:0px;width:33px;">72</div></div><div style="position:absolute;top:1152px;width:100%;height:16px;"><div class="line-numbers" style="left:0px;width:33px;">73</div></div><div style="position:absolute;top:1168px;width:100%;height:16px;"><div class="line-numbers" style="left:0px;width:33px;">74</div></div></div></div><div class="monaco-scrollable-element editor-scrollable vs" role="presentation" data-mprt="5" style="position: absolute; overflow: hidden; left: 59px; width: 1560px; height: 785px;"><div class="lines-content monaco-editor-background" style="position: absolute; overflow: hidden; width: 1e+06px; height: 1e+06px; will-change: transform; top: -500px; left: 0px;"><div class="view-overlays focused" role="presentation" aria-hidden="true" style="position: absolute; height: 0px; width: 1440px;"><div style="position:absolute;top:496px;width:100%;height:16px;"><div class="cigr" style="left:0px;height:16px;width:13.1953125px"></div><div class="cigr" style="left:13.1953125px;height:16px;width:13.1953125px"></div><div class="cigr" style="left:26.390625px;height:16px;width:13.1953125px"></div></div><div style="position:absolute;top:512px;width:100%;height:16px;"><div class="cigr" style="left:0px;height:16px;width:13.1953125px"></div><div class="cigr" style="left:13.1953125px;height:16px;width:13.1953125px"></div><div class="cigr" style="left:26.390625px;height:16px;width:13.1953125px"></div></div><div style="position:absolute;top:528px;width:100%;height:16px;"><div class="cigr" style="left:0px;height:16px;width:13.1953125px"></div><div class="cigr" style="left:13.1953125px;height:16px;width:13.1953125px"></div></div><div style="position:absolute;top:544px;width:100%;height:16px;"><div class="cigr" style="left:0px;height:16px;width:13.1953125px"></div><div class="cigr" style="left:13.1953125px;height:16px;width:13.1953125px"></div><div class="cigr" style="left:26.390625px;height:16px;width:13.1953125px"></div></div><div style="position:absolute;top:560px;width:100%;height:16px;"><div class="cigr" style="left:0px;height:16px;width:13.1953125px"></div><div class="cigr" style="left:13.1953125px;height:16px;width:13.1953125px"></div><div class="cigr" style="left:26.390625px;height:16px;width:13.1953125px"></div><div class="cigr" style="left:39.5859375px;height:16px;width:13.1953125px"></div></div><div style="position:absolute;top:576px;width:100%;height:16px;"><div class="cigr" style="left:0px;height:16px;width:13.1953125px"></div><div class="cigr" style="left:13.1953125px;height:16px;width:13.1953125px"></div><div class="cigr" style="left:26.390625px;height:16px;width:13.1953125px"></div></div><div style="position:absolute;top:592px;width:100%;height:16px;"><div class="cigr" style="left:0px;height:16px;width:13.1953125px"></div><div class="cigr" style="left:13.1953125px;height:16px;width:13.1953125px"></div><div class="cigr" style="left:26.390625px;height:16px;width:13.1953125px"></div></div><div style="position:absolute;top:608px;width:100%;height:16px;"><div class="cigr" style="left:0px;height:16px;width:13.1953125px"></div><div class="cigr" style="left:13.1953125px;height:16px;width:13.1953125px"></div></div><div style="position:absolute;top:624px;width:100%;height:16px;"><div class="cigr" style="left:0px;height:16px;width:13.1953125px"></div></div><div style="position:absolute;top:640px;width:100%;height:16px;"></div><div style="position:absolute;top:656px;width:100%;height:16px;"></div><div style="position:absolute;top:672px;width:100%;height:16px;"></div><div style="position:absolute;top:688px;width:100%;height:16px;"></div><div style="position:absolute;top:704px;width:100%;height:16px;"></div><div style="position:absolute;top:720px;width:100%;height:16px;"></div><div style="position:absolute;top:736px;width:100%;height:16px;"></div><div style="position:absolute;top:752px;width:100%;height:16px;"></div><div style="position:absolute;top:768px;width:100%;height:16px;"></div><div style="position:absolute;top:784px;width:100%;height:16px;"></div><div style="position:absolute;top:800px;width:100%;height:16px;"></div><div style="position:absolute;top:816px;width:100%;height:16px;"></div><div style="position:absolute;top:832px;width:100%;height:16px;"></div><div style="position:absolute;top:848px;width:100%;height:16px;"><div class="current-line" style="width:1440px; height:16px;"></div></div><div style="position: absolute; top: 864px; width: 100%; height: 16px;"></div><div style="position: absolute; top: 880px; width: 100%; height: 16px;"></div><div style="position: absolute; top: 896px; width: 100%; height: 16px;"></div><div style="position: absolute; top: 912px; width: 100%; height: 16px;"></div><div style="position: absolute; top: 928px; width: 100%; height: 16px;"></div><div style="position: absolute; top: 944px; width: 100%; height: 16px;"></div><div style="position: absolute; top: 960px; width: 100%; height: 16px;"></div><div style="position: absolute; top: 976px; width: 100%; height: 16px;"></div><div style="position: absolute; top: 992px; width: 100%; height: 16px;"></div><div style="position: absolute; top: 1008px; width: 100%; height: 16px;"></div><div style="position: absolute; top: 1024px; width: 100%; height: 16px;"></div><div style="position: absolute; top: 1040px; width: 100%; height: 16px;"><div class="cigr" style="left:0px;height:16px;width:13.1953125px"></div></div><div style="position: absolute; top: 1056px; width: 100%; height: 16px;"><div class="cigr" style="left:0px;height:16px;width:13.1953125px"></div></div><div style="position: absolute; top: 1072px; width: 100%; height: 16px;"></div><div style="position: absolute; top: 1088px; width: 100%; height: 16px;"></div><div style="position: absolute; top: 1104px; width: 100%; height: 16px;"></div><div style="position: absolute; top: 1120px; width: 100%; height: 16px;"><div class="cigr" style="left:0px;height:16px;width:13.1953125px"></div></div><div style="position: absolute; top: 1136px; width: 100%; height: 16px;"><div class="cigr" style="left:0px;height:16px;width:13.1953125px"></div></div><div style="position: absolute; top: 1152px; width: 100%; height: 16px;"></div><div style="position: absolute; top: 1168px; width: 100%; height: 16px;"></div></div><div role="presentation" aria-hidden="true" class="view-rulers"></div><div class="view-zones" role="presentation" aria-hidden="true" style="position: absolute;"></div><div class="view-lines" role="presentation" aria-hidden="true" data-mprt="7" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 12px; line-height: 16px; letter-spacing: 0px; width: 1440px; height: 1953px;"><div style="top:496px;height:16px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="mtk22">Tools</span><span class="mtk1">.loadScript([</span><span class="mtk20">'</span><span class="mtk20 detected-link">https://res.wx.qq.com/open/js/jweixin-1.6.0.js</span><span class="mtk20">'</span><span class="mtk1">]);</span></span></div><div style="top:512px;height:16px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="mtk6">break</span><span class="mtk1">;</span></span></div><div style="top:528px;height:16px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="mtk6">case</span><span class="mtk1">&nbsp;</span><span class="mtk20">'alipay'</span><span class="mtk1">:</span></span></div><div style="top:544px;height:16px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="mtk22">Tools</span><span class="mtk1">.loadScript([</span></span></div><div style="top:560px;height:16px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="mtk20">'</span><span class="mtk20 detected-link">https://a.alipayobjects.com/g/h5-lib/alipayjsapi/3</span><span class="mtk20 detected-link">.0.5/alipayjsapi.min.js</span><span class="mtk20">'</span><span class="mtk1">,</span></span></div><div style="top:576px;height:16px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]);</span></span></div><div style="top:592px;height:16px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="mtk6">break</span><span class="mtk1">;</span></span></div><div style="top:608px;height:16px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="mtk6">default</span><span class="mtk1">:</span></span></div><div style="top:624px;height:16px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;}</span></span></div><div style="top:640px;height:16px;" class="view-line"><span><span class="mtk1">}</span></span></div><div style="top:656px;height:16px;" class="view-line"><span><span>&nbsp;</span></span></div><div style="top:672px;height:16px;" class="view-line"><span><span class="mtk8">//&nbsp;3.&nbsp;App配置/挂载相关</span></span></div><div style="top:688px;height:16px;" class="view-line"><span><span class="mtk8">//&nbsp;a.&nbsp;创建App</span></span></div><div style="top:704px;height:16px;" class="view-line"><span><span class="mtk6">const</span><span class="mtk1">&nbsp;app&nbsp;=&nbsp;createApp(</span><span class="mtk22">App</span><span class="mtk1">);</span></span></div><div style="top:720px;height:16px;" class="view-line"><span><span>&nbsp;</span></span></div><div style="top:736px;height:16px;" class="view-line"><span><span class="mtk8">//&nbsp;b.&nbsp;注入</span></span></div><div style="top:752px;height:16px;" class="view-line"><span><span class="mtk1">app.use(router).use(store,&nbsp;key).use(vant);</span></span></div><div style="top:768px;height:16px;" class="view-line"><span><span>&nbsp;</span></span></div><div style="top:784px;height:16px;" class="view-line"><span><span class="mtk8">//&nbsp;c.&nbsp;配置全局属性&nbsp;--&nbsp;访问：在setup函数中通过ctx访问&nbsp;eg-ctx.$sayHi</span></span></div><div style="top:800px;height:16px;" class="view-line"><span><span class="mtk1">app.config.globalProperties.$filters&nbsp;=&nbsp;filters;</span></span></div><div style="top:816px;height:16px;" class="view-line"><span><span>&nbsp;</span></span></div><div style="top:832px;height:16px;" class="view-line"><span><span class="mtk8">//&nbsp;d.&nbsp;自定义指令</span></span></div><div style="top:848px;height:16px;" class="view-line"><span><span class="mtk1">directives(app);</span></span></div><div style="top: 864px; height: 16px;" class="view-line"><span><span>&nbsp;</span></span></div><div style="top: 880px; height: 16px;" class="view-line"><span><span class="mtk8">//&nbsp;e.&nbsp;配置Schemes(提示：原生嵌套H5时配置)</span></span></div><div style="top: 896px; height: 16px;" class="view-line"><span><span class="mtk22">Schemes</span><span class="mtk1">.config(</span><span class="mtk20">'xxx://www.xxx.com'</span><span class="mtk1">,&nbsp;</span><span class="mtk20">'二级目录'</span><span class="mtk1">);</span></span></div><div style="top: 912px; height: 16px;" class="view-line"><span><span>&nbsp;</span></span></div><div style="top: 928px; height: 16px;" class="view-line"><span><span class="mtk8">//&nbsp;f.&nbsp;挂载</span></span></div><div style="top: 944px; height: 16px;" class="view-line"><span><span class="mtk1">app.mount(</span><span class="mtk20">'#app'</span><span class="mtk1">);</span></span></div><div style="top: 960px; height: 16px;" class="view-line"><span><span>&nbsp;</span></span></div><div style="top: 976px; height: 16px;" class="view-line"><span><span class="mtk8">//&nbsp;4.&nbsp;Vuex&nbsp;---&nbsp;持久化</span></span></div><div style="top: 992px; height: 16px;" class="view-line"><span><span class="mtk8">//&nbsp;→&nbsp;页面进入：合并状态</span></span></div><div style="top: 1008px; height: 16px;" class="view-line"><span><span class="mtk6">const</span><span class="mtk1">&nbsp;localState&nbsp;=&nbsp;localStorage.getItem(</span><span class="mtk20">'LOCAL_STORE_STATE'</span><span class="mtk1">);</span></span></div><div style="top: 1024px; height: 16px;" class="view-line"><span><span class="mtk6">if</span><span class="mtk1">&nbsp;(localState)&nbsp;{</span></span></div><div style="top: 1040px; height: 16px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;console.log(</span><span class="mtk20">'合并Store...'</span><span class="mtk1">);</span></span></div><div style="top: 1056px; height: 16px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;store.replaceState(</span><span class="mtk22">Object</span><span class="mtk1">.assign(store.state,&nbsp;</span><span class="mtk22">JSON</span><span class="mtk1">.parse(localState)));</span></span></div><div style="top: 1072px; height: 16px;" class="view-line"><span><span class="mtk1">}</span></span></div><div style="top: 1088px; height: 16px;" class="view-line"><span><span class="mtk8">//&nbsp;→&nbsp;页面刷新：存储状态</span></span></div><div style="top: 1104px; height: 16px;" class="view-line"><span><span class="mtk1">window.addEventListener(</span><span class="mtk20">'beforeunload'</span><span class="mtk1">,&nbsp;()&nbsp;=&gt;&nbsp;{</span></span></div><div style="top: 1120px; height: 16px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;console.log(</span><span class="mtk20">'缓存Store...'</span><span class="mtk1">);</span></span></div><div style="top: 1136px; height: 16px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;localStorage.setItem(</span><span class="mtk20">'LOCAL_STORE_STATE'</span><span class="mtk1">,&nbsp;</span><span class="mtk22">JSON</span><span class="mtk1">.stringify(store.state));</span></span></div><div style="top: 1152px; height: 16px;" class="view-line"><span><span class="mtk1">});</span></span></div><div style="top: 1168px; height: 16px;" class="view-line"><span><span>&nbsp;</span></span></div></div><div data-mprt="1" class="contentWidgets" style="position: absolute; top: 0px;"><div class="lightbulb-glyph" title="Show Fixes (Ctrl+.)" widgetid="LightBulbWidget" style="position: absolute; visibility: hidden; max-width: 1440px;"></div></div><div role="presentation" aria-hidden="true" class="cursors-layer cursor-line-style cursor-solid"><div class="cursor " style="height: 16px; top: 848px; left: 105px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 12px; line-height: 16px; letter-spacing: 0px; display: block; visibility: inherit; width: 2px;"></div></div></div><div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal" style="position: absolute; width: 1426px; height: 10px; left: 0px; bottom: 0px;"><div class="slider" style="position: absolute; top: 0px; left: 0px; height: 10px; will-change: transform; width: 1426px;"></div></div><canvas class="decorationsOverviewRuler" aria-hidden="true" width="14" height="785" style="position: absolute; will-change: transform; top: 0px; right: 0px; width: 14px; height: 785px;"></canvas><div role="presentation" aria-hidden="true" class="visible scrollbar vertical" style="position: absolute; width: 14px; height: 785px; right: 0px; top: 0px;"><div class="slider" style="position: absolute; top: 201px; left: 0px; width: 14px; will-change: transform; height: 315px;"></div></div></div><div role="presentation" aria-hidden="true" style="width: 1485px;" class="scroll-decoration"></div><textarea data-mprt="6" class="inputarea" wrap="off" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" aria-label="Editor content;Press Alt+F1 for Accessibility Options." role="textbox" aria-multiline="true" aria-haspopup="false" aria-autocomplete="both" style="font-size: 1px; line-height: 16px; top: 348px; left: 165px; width: 1px; height: 1px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; letter-spacing: 0px;"></textarea><div style="position: absolute; top: 0px; left: 0px; width: 0px; height: 0px;" class="monaco-editor-background textAreaCover line-numbers"></div><div data-mprt="4" class="overlayWidgets" style="width: 1619px;"><div class="accessibilityHelpWidget" role="dialog" aria-hidden="true" widgetid="editor.contrib.accessibilityHelpWidget" style="display: none; position: absolute;"><div role="document"></div></div><div class="monaco-editor-hover hidden" aria-hidden="true" role="presentation" widgetid="editor.contrib.modesGlyphHoverWidget" style="position: absolute;"></div></div><div data-mprt="8" class="minimap slider-always" role="presentation" aria-hidden="true" style="position: absolute; left: 1485px; width: 120px; height: 785px;"><div class="minimap-shadow-hidden" style="height: 785px;"></div><canvas width="120" height="785" style="position: absolute; left: 0px; width: 120px; height: 785px;"></canvas><div class="minimap-slider" style="position: absolute; will-change: transform; width: 120px; top: 62.5px; height: 98px;"><div class="minimap-slider-horizontal" style="position: absolute; left: 0px; width: 120px; top: 0px; height: 98px;"></div></div></div></div><div data-mprt="2" class="overflowingContentWidgets"><div class="monaco-editor rename-box" widgetid="__renameInputWidget" style="height: 16px; box-shadow: rgb(168, 168, 168) 0px 2px 8px; position: absolute; visibility: hidden; max-width: 1920px;"><input class="rename-input" type="text" aria-label="Rename input. Type new name and press Enter to commit." style="font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 12px; background-color: rgb(255, 255, 255); color: rgb(97, 97, 97); border-width: 0px; border-style: none;"></div><div class="monaco-editor-hover hidden" tabindex="0" widgetid="editor.contrib.modesContentHoverWidget" style="position: absolute; visibility: hidden; max-width: 1920px; top: 280px; left: 99px;"><div class="monaco-scrollable-element " role="presentation" style="position: relative; overflow: hidden;"><div class="monaco-editor-hover-content" style="overflow: hidden; font-size: 12px; line-height: 16px; max-height: 250px;"><div class="hover-row"><div><div class="code" data-code="id#1" style="font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 12px; line-height: 16px; letter-spacing: 0px;"><span style="font-family: Consolas, &#39;Courier New&#39;, monospace"><div class="monaco-tokenized-source"><span class="mtk1">const app: any</span></div></span></div></div></div></div><div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal" style="position: absolute; width: 92px; height: 10px; left: 0px; bottom: 0px;"><div class="slider" style="position: absolute; top: 0px; left: 0px; height: 10px; will-change: transform; width: 92px;"></div></div><div role="presentation" aria-hidden="true" class="invisible scrollbar vertical" style="position: absolute; width: 10px; height: 24px; right: 0px; top: 0px;"><div class="slider" style="position: absolute; top: 0px; left: 0px; width: 10px; will-change: transform; height: 24px;"></div></div><div class="shadow"></div><div class="shadow"></div><div class="shadow top-left-corner"></div></div></div></div><div class="context-view" aria-hidden="true" style="display: none;"></div></div></div> <div class="viewzone" style="visibility: hidden;"><a class="accept-current">接受当前的更改</a>
+    |
+    <a class="accept-incoming">接受引入的更改</a>
+    |
+    <a class="accept-both">接受两者</a></div></div> <!----></div></div></div></div></div> <div class="ide-file-state"><div class="flex-left ide-file-state-section"><span></span> <div class="ide-branch-info ide-flex-box"><i class="iconfont icon-branches ide-icon"></i> <a title="master" class="shrink-wrap">master</a></div> <!----></div> <div class="flex-right ide-file-state-section"><span class="ide-file-state-name">main.ts</span> <span class="ide-file-size">1.92 KB</span> <span class="ide-file-eof">LF</span> <span class="ide-file-position">55:1</span> <span class="ide-file-language">typescript</span></div></div></div>
+<script src="./李鸿耀_vite-vue-template - Gitee IDE_files/webide-manifest.b59875a8a43882ea01c3.js.下载"></script>
+<script src="./李鸿耀_vite-vue-template - Gitee IDE_files/webide-vendor.68415bcb3bad8f506918.js.下载"></script>
+<script src="./李鸿耀_vite-vue-template - Gitee IDE_files/webide.3cfeae32247e0fbdf973.js.下载"></script>
+
+</div><div id="__autosizeInputGhost" style="display: inline-block; height: 0px; overflow: hidden; position: absolute; top: 0px; visibility: hidden; white-space: nowrap;"></div>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [["$$","$$"],["\\[","\\]"]],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+    ignoreClass: "container|files",
+    processClass: "markdown-body"
+  }
+});
+</script>
+<script src="./李鸿耀_vite-vue-template - Gitee IDE_files/MathJax.js.下载"></script>
+
+
+
+<div class="star-collection-popup d-none" style="display: none;">
+                  <div class="star-collection-popup__header d-flex-between">
+                    <div class="star-collection-popup__header__left">已成功 Star，添加到以下星选集：</div>
+                    <div class="star-collection-popup__header__right"><i class="iconfont icon-close js-close-popup cursor-pointer hover-color"></i></div>
+                  </div>
+                  <div class="star-collection-popup__body">
+                    <div class="blank-message d-none">点击下方新建星选集</div>
+                    <div class="star-collection-popup__search ui input small icon">
+                      <input type="text" class="js-star-collection-search" placeholder="快速搜索">
+                      <i class="iconfont icon-search"></i>
+                    </div>
+                    <div class="star-collection-popup__scroll">
+                      <div class="star-collection-popup__list js-star-collection-popup__list">
+
+                      </div>
+                    </div>                    
+                  </div>
+                  <div class="star-collection-popup__footer js-star-collection-popup__footer">
+                    <div class="star-collection-popup__footer--normal js-new-star-collection-btn cursor-pointer hover-color">新建星选集</div>
+                    <div class="star-collection-popup__footer--new d-flex-between">
+                      <input class="star-collection-popup__footer__new-input js-star-collection-popup__footer__new-input" maxlength="35" type="text" placeholder="请输入星选集名称">
+                      <div class="star-collection-popup__footer__add-btn js-star-collection-popup__footer__add-btn cursor-pointer hover-color disabled">新建</div>
+                    </div>
+                  </div>
+                 </div><div class="monaco-aria-container"><div class="monaco-alert" role="alert" aria-atomic="true"></div><div class="monaco-status" role="status" aria-atomic="true"></div></div></body></html>
