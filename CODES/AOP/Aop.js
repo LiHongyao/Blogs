@@ -2,12 +2,12 @@
  * @Author: Lee
  * @Date: 2022-01-17 16:31:08
  * @LastEditors: Lee
- * @LastEditTime: 2022-01-17 19:34:21
+ * @LastEditTime: 2022-12-12 15:59:45
  */
 
 /**
  * 前置通知
- * @description 给方法加入前置切片函数，可以在执行方法之前执行一些操作,
+ * @description 给方法加入前置切片函数，可以在方法执行之前做一些操作,
  * @param {Function} callback 前置执行函数
  * @returns
  */
@@ -54,41 +54,3 @@ Function.prototype.around = function (beforeFn, afterFn) {
     return _that.before(beforeFn).after(afterFn).apply(this, arguments);
   };
 };
-
-// ———— 业务代码 ————
-function logic() {
-  console.log('service code...');
-}
-
-// → 1）测试前置通知
-var logic1 = logic.before(function () {
-  console.log('before');
-});
-logic1();
-/*
-before
-service code...*/
-
-// → 2）测试后置通知
-var logic2 = logic.after(function () {
-  console.log('after');
-});
-logic2();
-/*
-service code...
-after */
-
-// → 3）测试环绕通知
-var logic3 = logic.around(
-  function () {
-    console.log('before');
-  },
-  function () {
-    console.log('after');
-  }
-);
-logic3();
-/**
-before
-service code...
-after */

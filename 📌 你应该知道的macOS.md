@@ -44,27 +44,27 @@ Homebrew 简称 brew，是Mac OSX上的软件包管理工具，能在Mac中方�
 $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-> 注意：在安装过程中，如果提示：“`Press RETURN to continue or any other key to abort`”，需按 Enter 键进行下一步操作。
+> 注意：在安装过程中，如果提示：*`Press RETURN to continue or any other key to abort`*，需按 `Enter` 键进行下一步操作。
 
 ## 3. Brew 指令
 
 - `brew -h`：查看帮助
 - `brew -v`：查看版本
-- `brew update`：更新brew
-- `brew install xxx`：安装软件包
-- `brew uninstall xxx` ：  卸载软件包
-- `brew upgrade [xxx]`：更新软件包
+- `brew update`：更新 brew
+- `brew install「包名」`：安装软件包
+- `brew uninstall「包名」` ：  卸载软件包
+- `brew upgrade「包名」`：更新软件包
 - `brew outdated`：查询可更新的包
 - `brew list`：查看安装列表
 - `brew search 「包名」`：搜索软件包
 - `brew cask install 「程序名」`：安装 macOS 应用程序
 - `brew update-reset`：重置
 
-> 提示：brew 安装目录：*`/usr/local/Cellar`*
+> 提示：`brew` 安装目录：*`/usr/local/Cellar`*
 
 ## 4. 异常处理
 
-undefined method 'uses_from_macos' for Formulary
+1. *`undefined method 'uses_from_macos' for Formulary`*
 
 ```shell
 $ cd "$(brew --repo)" && git fetch && git reset --hard origin/master && brew update
@@ -89,9 +89,9 @@ sudo vi /etc/hosts
 
 2. **添加格式**
 
-在 “~/.bash_profile” 中添加，语法格式如下：
+在 *`~/.bash_profile`* 中添加，语法格式如下：
 
-```
+```ini
 export 变量1=路径1
 export 变量2=路径2
 export 变量3=路径3
@@ -111,10 +111,10 @@ $ source ~/.bash_profile
 
 5. **拓展**
 
-打开终端，没有自动加载 “~/.bash_profile”的解决方法如下：
+打开终端，没有自动加载 `~/.bash_profile` 的解决方法如下：
 
 ```shell
-$ vim /private/etc/zshrc 
+$ sudo vim /private/etc/zshrc 
 ```
 
 然后再最后一行添加如下代码：
