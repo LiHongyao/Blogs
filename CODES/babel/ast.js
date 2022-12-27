@@ -2,7 +2,7 @@
  * @Author: Lee
  * @Date: 2022-01-12 14:12:05
  * @LastEditors: Lee
- * @LastEditTime: 2022-01-14 14:26:48
+ * @LastEditTime: 2022-12-22 12:10:33
  */
 
 // → 导入模块
@@ -10,8 +10,6 @@ const parser = require('@babel/parser');
 const traverse = require('@babel/traverse');
 const generator = require('@babel/generator');
 const t = require('@babel/types');
-
-
 
 // → 定义一段代码字符串
 const codeString = `
@@ -29,7 +27,7 @@ const ast = parser.parse(codeString, {
 // → 遍历节点
 traverse.default(ast, {
   FunctionDeclaration(path) {
-    console.log(path.scope.generateUid());
+    console.log('————：', path.scope.generateUid());
   },
 });
 

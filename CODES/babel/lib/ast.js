@@ -6,17 +6,14 @@ require("core-js/modules/es.function.name.js");
  * @Author: Lee
  * @Date: 2021-12-25 10:13:29
  * @LastEditors: Lee
- * @LastEditTime: 2022-01-13 21:19:13
+ * @LastEditTime: 2022-12-22 11:28:11
  */
 var esprima = require('esprima');
-
 var estraverse = require('estraverse');
-
-var escodegen = require('escodegen'); // -- 源代码
+var escodegen = require('escodegen'); 
 
 
 var code = "const name = 'Muzili';"; // -- 词法分析
-
 var ast = esprima.parseScript(code); // -- 遍历AST树
 
 estraverse.traverse(ast, {
