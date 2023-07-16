@@ -1,0 +1,68 @@
+<!--
+ * @Author: Lee
+ * @Date: 2023-07-14 15:36:20
+ * @LastEditors: Lee
+ * @LastEditTime: 2023-07-14 16:17:27
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Stream</title>
+</head>
+
+<body>
+
+  <input type="file" />
+
+  <img />
+
+  <script>
+    // - methods
+    // 1. 读取文件内容到ArrayBuffer 
+    const readFileToArrayBuffer = (file) => {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+
+        // 注册文件读取完成后的回调函数
+        reader.onload = function (event) {
+          const arrayBuffer = event.target.result;
+          resolve(arrayBuffer);
+        }
+        // 读取文件内容到ArrayBuffer
+        reader.readAsArrayBuffer(file);
+      });
+    }
+
+    // 2. 将ArrayBuffer转为十六进制字符串
+    const arrayBufferToHexString = (arrayBuffer) => {
+      const uint8Array = new Uint8Array(arrayBuffer);
+      let hexString = '';
+      for (let i = 0; i < uint8Array.length; i++) {
+        const hex = uint8Array[i].toString(16).padStart(2, '0');
+        hexString += hex;
+      }
+      return hexString;
+    }
+
+    // -- events 
+    document.querySelector("[type=file]").onchange = function (event) {
+      const file = event.target.files[0];
+      if (file) {
+        readFileToArrayBuffer(file).then(arrayBuffer => {
+          const hexString = arrayBufferToHexString(arrayBuffer);
+          console.log(hexString);
+
+        })
+      } else {
+        console.log("请选择一个文件");
+      }
+    }
+
+  </script>
+</body>
+
+</html>
