@@ -1,0 +1,52 @@
+.wrapper {
+  display: block;
+  width: 800px;
+  height: 500px;
+  margin: 50px auto;
+  position: relative;
+}
+
+.wrapper canvas {
+  border: 1px solid #eee;
+}
+
+
+.wrapper .tools {
+  width: 90px;
+  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #F5F5F5;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 16px;
+}
+
+.wrapper .tools .item {
+  width: 70px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  color: #555;
+  background: #FFF;
+  transition: all .25s linear;
+}
+
+.wrapper .tools .item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.wrapper .tools .item:hover {
+  opacity: 1;
+}
+
+
+.wrapper .tools [type='color'] {
+  outline: none;
+}

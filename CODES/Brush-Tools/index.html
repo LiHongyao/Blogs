@@ -1,0 +1,50 @@
+<!--
+ * @Author: Lee
+ * @Date: 2023-08-27 15:04:20
+ * @LastEditors: Lee
+ * @LastEditTime: 2023-08-29 17:44:30
+ * @Description: 
+-->
+<!--
+ * @Author: Lee
+ * @Date: 2023-08-27 15:04:20
+ * @LastEditors: Lee
+ * @LastEditTime: 2023-08-27 15:18:32
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>画笔工具</title>
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+
+
+  <div style="padding: 100px;">
+
+
+    <div class="wrapper">
+      <canvas willReadFrequently="true"></canvas>
+      <div class="tools">
+        <input class="item" type="color" />
+        <input class="item" type="range" min="1" max="10" step="2" />
+        <div class="item undo">撤销</div>
+        <div class="item clear">清空</div>
+        <div class="item eraser">橡皮擦</div>
+        <div class="item save">保存图片</div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./js/index.js">
+
+  </script>
+
+</body>
+
+</html>

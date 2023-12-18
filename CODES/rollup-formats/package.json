@@ -1,0 +1,20 @@
+{
+  "name": "rollup-formats",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c --bundleConfigAsCjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "rollup": "^3.28.0"
+  },
+  "dependencies": {
+    "jquery": "^3.7.0",
+    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21"
+  }
+}

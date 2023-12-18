@@ -1,0 +1,76 @@
+<!--
+ * @Author: Lee
+ * @Date: 2023-08-26 20:37:45
+ * @LastEditors: Lee
+ * @LastEditTime: 2023-08-27 13:58:49
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 2</title>
+  <style>
+    body {
+      background-color: cornflowerblue;
+    }
+  </style>
+</head>
+
+<body>
+  <h3>🖥 子窗口</h3>
+  <p>来自父窗口的信息：<span id="message"></span></p>
+  <button type="button" class="toggleScreen">全屏开关</button>
+
+  <script>
+
+    console.log("search:", location.search);
+    console.log(localStorage.getItem('localToken'));
+    console.log(sessionStorage.getItem("sessionToken"));
+
+    const eleMessage = document.querySelector("#message");
+    const eleButton = document.querySelector(".toggleScreen");
+
+    window.addEventListener("message", function (message) {
+      console.log(message.origin, window.origin)
+
+      // -- 接收父窗口发送的消息
+      eleMessage.textContent = message.data;
+      // -- 发送消息给父窗口
+      const dateString = new Date().toLocaleString();
+      const postData = `消息已收到，接收时间：${dateString}`;
+      message.source.postMessage(postData, "*");
+    }, false);
+
+    eleButton.addEventListener("click", function () {
+      toggleFullscreen();
+    }, false);
+
+
+    function toggleFullscreen() {
+      const doc = window.document;
+      const docEl = doc.documentElement;
+      const requestFullscreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullscreen || docEl.msRequestFullscreen;
+      const exitFullscreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
+
+      if (!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
+        // 进入全屏模式
+        if (requestFullscreen) {
+          requestFullscreen.call(docEl);
+        }
+      } else {
+        // 退出全屏模式
+        if (exitFullscreen) {
+          exitFullscreen.call(doc);
+        }
+      }
+    }
+
+
+
+  </script>
+</body>
+
+</html>
